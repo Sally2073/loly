@@ -747,7 +747,7 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
         self.backgroundColor = [UIColor clearColor];
         self.userInteractionEnabled = NO;
         self.opaque = NO;
-        self.enemies.clear();
+        self->enemies.clear();   // مهم: استخدم self->
     }
     return self;
 }
@@ -761,9 +761,7 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     if (!ctx) return;
     
-    // ❌ حذفنا ClearRect عشان ميسودش الشاشة
-    // CGContextClearRect(ctx, rect);
-    
+    // لا تستخدم ClearRect عشان الشاشة متسودش
     if (!showESPBoxes || self->enemies.empty()) return;
     
     static void *g_mainCamera = NULL;
@@ -788,14 +786,12 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
             px = fmax(0.0f, fmin(w, px));
             py = fmax(0.0f, fmin(h, py));
             
-            // حجم البوكس (أكبر من الآيكون)
             CGFloat boxWidth = 48.0f;
             CGFloat boxHeight = boxWidth * 1.75f;
             
             CGRect boxRect = CGRectMake(px - boxWidth/2, py - boxHeight/2 - 12, boxWidth, boxHeight);
             
-            // لون أحمر واضح
-            CGContextSetStrokeColorWithColor(ctx, [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:0.9].CGColor);
+            CGContextSetStrokeColorWithColor(ctx, [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:0.95].CGColor);
             CGContextStrokeRect(ctx, boxRect);
         }
     } @catch (NSException *e) {
@@ -804,7 +800,6 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
 }
 
 @end
-
 @implementation ESPIconView
 
 - (instancetype)initWithFrame:(CGRect)frame {
