@@ -13,22 +13,23 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: |
+          brew install make ldid xz
+          echo "/opt/homebrew/opt/make/libexec/gnubin" >> $GITHUB_PATH
+
       - name: Cache Theos
         id: cache-theos
         uses: actions/cache@v4
         with:
-          path: |
-            ~/theos
-            /opt/theos
-          key: theos-cache-v1-${{ runner.os }}
-          restore-keys: |
-            theos-cache-v1-
+          path: /opt/theos
+          key: theos-cache-v2-${{ runner.os }}
+          restore-keys: theos-cache-v2-
 
       - name: Setup Theos
         if: steps.cache-theos.outputs.cache-hit != 'true'
         run: |
-          git clone --recursive https://github.com/theos/theos.git ~/theos
-          sudo mv ~/theos /opt/theos
+          git clone --recursive https://github.com/theos/theos.git /opt/theos
           sudo chown -R $(whoami) /opt/theos
           echo "THEOS=/opt/theos" >> $GITHUB_ENV
           echo "THEOS_MAKE_PATH=/opt/theos/makefiles" >> $GITHUB_ENV
@@ -51,5 +52,5 @@ jobs:
           path: packages/*.deb
           retention-days: 7
 
-      - name: Show Build Result
+      - name: Show Result
         run: ls -la packages/
