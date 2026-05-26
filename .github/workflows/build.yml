@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Install Build Tools
         run: |
           brew install make ldid xz
           echo "/opt/homebrew/opt/make/libexec/gnubin" >> $GITHUB_PATH
@@ -22,23 +22,21 @@ jobs:
         id: cache-theos
         uses: actions/cache@v4
         with:
-          path: /opt/theos
-          key: theos-cache-v2-${{ runner.os }}
-          restore-keys: theos-cache-v2-
+          path: ~/theos
+          key: theos-cache-v3-${{ runner.os }}
+          restore-keys: theos-cache-v3-
 
       - name: Setup Theos
-        if: steps.cache-theos.outputs.cache-hit != 'true'
         run: |
-          git clone --recursive https://github.com/theos/theos.git /opt/theos
-          sudo chown -R $(whoami) /opt/theos
-          echo "THEOS=/opt/theos" >> $GITHUB_ENV
-          echo "THEOS_MAKE_PATH=/opt/theos/makefiles" >> $GITHUB_ENV
-
-      - name: Setup Theos (Cached)
-        if: steps.cache-theos.outputs.cache-hit == 'true'
-        run: |
-          echo "THEOS=/opt/theos" >> $GITHUB_ENV
-          echo "THEOS_MAKE_PATH=/opt/theos/makefiles" >> $GITHUB_ENV
+          if [ ! -d ~/theos ]; then
+            echo "Cloning Theos..."
+            git clone --recursive https://github.com/theos/theos.git ~/theos
+          else
+            echo "Using cached Theos"
+          fi
+          
+          echo "THEOS=$HOME/theos" >> $GITHUB_ENV
+          echo "THEOS_MAKE_PATH=$HOME/theos/makefiles" >> $GITHUB_ENV
 
       - name: Build Tweak
         run: |
@@ -52,5 +50,5 @@ jobs:
           path: packages/*.deb
           retention-days: 7
 
-      - name: Show Result
+      - name: Show Build Result
         run: ls -la packages/
