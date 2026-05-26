@@ -741,10 +741,28 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
 
 @implementation ESPBoxView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.userInteractionEnabled = NO;
+        self.opaque = NO;
+        self.enemies.clear();
+    }
+    return self;
+}
+
+- (void)updateEnemies:(const std::vector<EnemyData>&)enemies {
+    self->enemies = enemies;
+    [self setNeedsDisplay];
+}
+
 - (void)drawRect:(CGRect)rect {
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     if (!ctx) return;
-    CGContextClearRect(ctx, rect);
+    
+    // ❌ حذفنا ClearRect عشان ميسودش الشاشة
+    // CGContextClearRect(ctx, rect);
     
     if (!showESPBoxes || self->enemies.empty()) return;
     
@@ -756,7 +774,7 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
     if (!g_mainCamera || !Camera_WorldToScreenPoint) return;
     
     @try {
-        CGContextSetLineWidth(ctx, 2.2f);
+        CGContextSetLineWidth(ctx, 2.3f);
         CGFloat w = rect.size.width;
         CGFloat h = rect.size.height;
         
@@ -770,17 +788,21 @@ void safe_memcpy(void *dst, const void *src, size_t len) {
             px = fmax(0.0f, fmin(w, px));
             py = fmax(0.0f, fmin(h, py));
             
-            // حجم أكبر من الـ Icon
-            CGFloat boxWidth = 48.0f;   // زاد عن 38
+            // حجم البوكس (أكبر من الآيكون)
+            CGFloat boxWidth = 48.0f;
             CGFloat boxHeight = boxWidth * 1.75f;
             
             CGRect boxRect = CGRectMake(px - boxWidth/2, py - boxHeight/2 - 12, boxWidth, boxHeight);
             
-            CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
+            // لون أحمر واضح
+            CGContextSetStrokeColorWithColor(ctx, [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:0.9].CGColor);
             CGContextStrokeRect(ctx, boxRect);
         }
-    } @catch (NSException *e) {}
+    } @catch (NSException *e) {
+        NSLog(@"[ESPBoxView] Exception: %@", e.reason);
+    }
 }
+
 @end
 
 @implementation ESPIconView
