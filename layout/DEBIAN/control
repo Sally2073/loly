@@ -1,0 +1,10 @@
+Package: com.yourcompany.koky
+Name: mobile legends Mod Menu
+Depends: mobilesubstrate
+Version: 1.9.94
+Architecture: iphoneos-arm64
+Description: mobile legends Mod Menu by loly!
+Maintainer: loly
+Author: loly
+Section: Tweaks
+Homepage: 
