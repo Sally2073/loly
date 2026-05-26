@@ -1,0 +1,4159 @@
+
+-----------
+Scripts.dll
+-----------
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+using Il2CppDummyDll;
+using Spine.Unity;
+using UnityEngine;
+using XOREnc;
+
+// Token: 0x02000072 RID: 114
+[Token(Token = "0x2000072")]
+public class BossChest : Monster
+{
+	// Token: 0x060002BB RID: 699 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002BB")]
+	[Address(RVA = "0x2C73E68", Offset = "0x2C73E68", VA = "0x2C73E68", Slot = "6")]
+	protected override void Awake()
+	{
+	}
+
+	// Token: 0x060002BC RID: 700 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002BC")]
+	[Address(RVA = "0x2C73F24", Offset = "0x2C73F24", VA = "0x2C73F24", Slot = "7")]
+	public override void AwakePoolItem()
+	{
+	}
+
+	// Token: 0x060002BD RID: 701 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002BD")]
+	[Address(RVA = "0x2C73FB0", Offset = "0x2C73FB0", VA = "0x2C73FB0", Slot = "8")]
+	public override void OnReleasePoolItem()
+	{
+	}
+
+	// Token: 0x060002BE RID: 702 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002BE")]
+	[Address(RVA = "0x2C73FE0", Offset = "0x2C73FE0", VA = "0x2C73FE0")]
+	public void showUp(Action onOpen)
+	{
+	}
+
+	// Token: 0x060002BF RID: 703 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002BF")]
+	[Address(RVA = "0x2C74174", Offset = "0x2C74174", VA = "0x2C74174")]
+	public void setGold(long gold)
+	{
+	}
+
+	// Token: 0x060002C0 RID: 704 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002C0")]
+	[Address(RVA = "0x2C741A0", Offset = "0x2C741A0", VA = "0x2C741A0")]
+	public void open()
+	{
+	}
+
+	// Token: 0x060002C1 RID: 705 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002C1")]
+	[Address(RVA = "0x2C7438C", Offset = "0x2C7438C", VA = "0x2C7438C", Slot = "27")]
+	public override void knockBack(float value)
+	{
+	}
+
+	// Token: 0x060002C2 RID: 706 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002C2")]
+	[Address(RVA = "0x2C74390", Offset = "0x2C74390", VA = "0x2C74390", Slot = "23")]
+	public override void takeDamage(Damage damage)
+	{
+	}
+
+	// Token: 0x060002C3 RID: 707 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002C3")]
+	[Address(RVA = "0x2C74714", Offset = "0x2C74714", VA = "0x2C74714", Slot = "63")]
+	protected override void CustomFixedUpdate()
+	{
+	}
+
+	// Token: 0x060002C4 RID: 708 RVA: 0x00002F40 File Offset: 0x00001140
+	[Token(Token = "0x60002C4")]
+	[Address(RVA = "0x2C74718", Offset = "0x2C74718", VA = "0x2C74718", Slot = "24")]
+	protected override Buff.Data OnPreAddBuff(Buff.Data buff)
+	{
+		return default(Buff.Data);
+	}
+
+	// Token: 0x060002C5 RID: 709 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002C5")]
+	[Address(RVA = "0x2C746F0", Offset = "0x2C746F0", VA = "0x2C746F0")]
+	private void punch()
+	{
+	}
+
+	// Token: 0x060002C6 RID: 710 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60002C6")]
+	[Address(RVA = "0x2C74724", Offset = "0x2C74724", VA = "0x2C74724")]
+	private IEnumerator coTimer()
+	{
+		return null;
+	}
+
+	// Token: 0x17000056 RID: 86
+	// (get) Token: 0x060002C7 RID: 711 RVA: 0x00002F58 File Offset: 0x00001158
+	[Token(Token = "0x17000056")]
+	public override double HP
+	{
+		[Token(Token = "0x60002C7")]
+		[Address(RVA = "0x2C747D0", Offset = "0x2C747D0", VA = "0x2C747D0", Slot = "36")]
+		get
+		{
+			return 0.0;
+		}
+	}
+
+	// Token: 0x060002C8 RID: 712 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60002C8")]
+	[Address(RVA = "0x2C747D8", Offset = "0x2C747D8", VA = "0x2C747D8")]
+	public BossChest()
+	{
+	}
+
+	// Token: 0x040001FD RID: 509
+	[Token(Token = "0x40001FD")]
+	[FieldOffset(Offset = "0x1F0")]
+	public List<tk2dSprite> renderers;
+
+	// Token: 0x040001FE RID: 510
+	[Token(Token = "0x40001FE")]
+	[FieldOffset(Offset = "0x1F8")]
+	public tk2dSprite golds1;
+
+	// Token: 0x040001FF RID: 511
+	[Token(Token = "0x40001FF")]
+	[FieldOffset(Offset = "0x200")]
+	public tk2dSprite golds2;
+
+	// Token: 0x04000200 RID: 512
+	[Token(Token = "0x4000200")]
+	[FieldOffset(Offset = "0x208")]
+	public tk2dSprite golds3;
+
+	// Token: 0x04000201 RID: 513
+	[Token(Token = "0x4000201")]
+	[FieldOffset(Offset = "0x210")]
+	public tk2dSprite golds4;
+
+	// Token: 0x04000202 RID: 514
+	[Token(Token = "0x4000202")]
+	[FieldOffset(Offset = "0x218")]
+	public Transform chest;
+
+	// Token: 0x04000203 RID: 515
+	[Token(Token = "0x4000203")]
+	[FieldOffset(Offset = "0x220")]
+	public SkeletonAnimation chestSpine;
+
+	// Token: 0x04000204 RID: 516
+	[Token(Token = "0x4000204")]
+	[FieldOffset(Offset = "0x228")]
+	public SpriteRenderer itemSprite;
+
+	// Token: 0x04000205 RID: 517
+	[Token(Token = "0x4000205")]
+	[FieldOffset(Offset = "0x230")]
+	public DOTweenAnimation tween;
+
+	// Token: 0x04000206 RID: 518
+	[Token(Token = "0x4000206")]
+	[FieldOffset(Offset = "0x238")]
+	private XORFloat leftTime;
+
+	// Token: 0x04000207 RID: 519
+	[Token(Token = "0x4000207")]
+	[FieldOffset(Offset = "0x250")]
+	public ItemSlotPro currentItem;
+
+	// Token: 0x04000208 RID: 520
+	[Token(Token = "0x4000208")]
+	[FieldOffset(Offset = "0x258")]
+	public XORFloat currentItemRate;
+
+	// Token: 0x04000209 RID: 521
+	[Token(Token = "0x4000209")]
+	[FieldOffset(Offset = "0x26C")]
+	public XORInt droppedMonsterCode;
+
+	// Token: 0x0400020A RID: 522
+	[Token(Token = "0x400020A")]
+	[FieldOffset(Offset = "0x0")]
+	public static EncLong Gold;
+
+	// Token: 0x0400020B RID: 523
+	[Token(Token = "0x400020B")]
+	[FieldOffset(Offset = "0x280")]
+	private EncLong leftGold;
+
+	// Token: 0x0400020C RID: 524
+	[Token(Token = "0x400020C")]
+	[FieldOffset(Offset = "0x8")]
+	public static Dragon Owner;
+
+	// Token: 0x0400020D RID: 525
+	[Token(Token = "0x400020D")]
+	[FieldOffset(Offset = "0x10")]
+	public static XORInt Invalid;
+
+	// Token: 0x0400020E RID: 526
+	[Token(Token = "0x400020E")]
+	[FieldOffset(Offset = "0x288")]
+	private bool isOpened;
+
+	// Token: 0x0400020F RID: 527
+	[Token(Token = "0x400020F")]
+	[FieldOffset(Offset = "0x290")]
+	private Action onOpen;
+
+	// Token: 0x02000073 RID: 115
+	[Token(Token = "0x2000073")]
+	public class Odds
+	{
+		// Token: 0x060002CC RID: 716 RVA: 0x00002142 File Offset: 0x00000342
+		[Token(Token = "0x60002CC")]
+		[Address(RVA = "0x2C74BE0", Offset = "0x2C74BE0", VA = "0x2C74BE0")]
+		public static List<BossChest.Odds.Data> Calc(string chestName)
+		{
+			return null;
+		}
+
+		// Token: 0x060002CD RID: 717 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x60002CD")]
+		[Address(RVA = "0x2C75454", Offset = "0x2C75454", VA = "0x2C75454")]
+		public Odds()
+		{
+		}
+
+		// Token: 0x02000074 RID: 116
+		[Token(Token = "0x2000074")]
+		public struct Data
+		{
+			// Token: 0x04000210 RID: 528
+			[Token(Token = "0x4000210")]
+			[FieldOffset(Offset = "0x0")]
+			public EquipableItem.Grade grade;
+
+			// Token: 0x04000211 RID: 529
+			[Token(Token = "0x4000211")]
+			[FieldOffset(Offset = "0x4")]
+			public XORFloat odds;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Il2CppDummyDll;
+using XOREnc;
+
+// Token: 0x02000034 RID: 52
+[Token(Token = "0x2000034")]
+public class Castle : UnitObject
+{
+	// Token: 0x14000009 RID: 9
+	// (add) Token: 0x06000130 RID: 304 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000131 RID: 305 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x14000009")]
+	public static event Action OnSwitchArcherCannon
+	{
+		[Token(Token = "0x6000130")]
+		[Address(RVA = "0x2C59278", Offset = "0x2C59278", VA = "0x2C59278")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000131")]
+		[Address(RVA = "0x2C59360", Offset = "0x2C59360", VA = "0x2C59360")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x1400000A RID: 10
+	// (add) Token: 0x06000132 RID: 306 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000133 RID: 307 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1400000A")]
+	public static event Action<int> OnChangedLevel
+	{
+		[Token(Token = "0x6000132")]
+		[Address(RVA = "0x2C59448", Offset = "0x2C59448", VA = "0x2C59448")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000133")]
+		[Address(RVA = "0x2C59548", Offset = "0x2C59548", VA = "0x2C59548")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x06000134 RID: 308 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000134")]
+	[Address(RVA = "0x2C59648", Offset = "0x2C59648", VA = "0x2C59648", Slot = "6")]
+	protected override void Awake()
+	{
+	}
+
+	// Token: 0x06000135 RID: 309 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000135")]
+	[Address(RVA = "0x2C59CD4", Offset = "0x2C59CD4", VA = "0x2C59CD4")]
+	private void Start()
+	{
+	}
+
+	// Token: 0x06000136 RID: 310 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000136")]
+	[Address(RVA = "0x2C59D88", Offset = "0x2C59D88", VA = "0x2C59D88")]
+	public void reload()
+	{
+	}
+
+	// Token: 0x06000137 RID: 311 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000137")]
+	[Address(RVA = "0x2C5A458", Offset = "0x2C5A458", VA = "0x2C5A458")]
+	private void onStartBattle()
+	{
+	}
+
+	// Token: 0x06000138 RID: 312 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000138")]
+	[Address(RVA = "0x2C5B4D8", Offset = "0x2C5B4D8", VA = "0x2C5B4D8")]
+	private void onCompleteBattle()
+	{
+	}
+
+	// Token: 0x06000139 RID: 313 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000139")]
+	[Address(RVA = "0x2C5B664", Offset = "0x2C5B664", VA = "0x2C5B664")]
+	private void RecoveryTimer(float elapsed)
+	{
+	}
+
+	// Token: 0x0600013A RID: 314 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600013A")]
+	[Address(RVA = "0x2C5B960", Offset = "0x2C5B960", VA = "0x2C5B960")]
+	private void onDieMonster(UnitObject monster)
+	{
+	}
+
+	// Token: 0x0600013B RID: 315 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600013B")]
+	[Address(RVA = "0x2C5BA94", Offset = "0x2C5BA94", VA = "0x2C5BA94", Slot = "23")]
+	public override void takeDamage(Damage damage)
+	{
+	}
+
+	// Token: 0x0600013C RID: 316 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600013C")]
+	[Address(RVA = "0x2C5BFD8", Offset = "0x2C5BFD8", VA = "0x2C5BFD8")]
+	public void Repair(double value)
+	{
+	}
+
+	// Token: 0x17000025 RID: 37
+	// (get) Token: 0x0600013D RID: 317 RVA: 0x00002850 File Offset: 0x00000A50
+	[Token(Token = "0x17000025")]
+	public override double HP
+	{
+		[Token(Token = "0x600013D")]
+		[Address(RVA = "0x2C5C09C", Offset = "0x2C5C09C", VA = "0x2C5C09C", Slot = "36")]
+		get
+		{
+			return 0.0;
+		}
+	}
+
+	// Token: 0x0600013E RID: 318 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600013E")]
+	[Address(RVA = "0x2C5C194", Offset = "0x2C5C194", VA = "0x2C5C194")]
+	public void SetHP(double hp)
+	{
+	}
+
+	// Token: 0x0600013F RID: 319 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600013F")]
+	[Address(RVA = "0x2C5C278", Offset = "0x2C5C278", VA = "0x2C5C278")]
+	public void HP1Forced()
+	{
+	}
+
+	// Token: 0x17000026 RID: 38
+	// (get) Token: 0x06000140 RID: 320 RVA: 0x00002868 File Offset: 0x00000A68
+	[Token(Token = "0x17000026")]
+	public bool IsUnderHalfHP
+	{
+		[Token(Token = "0x6000140")]
+		[Address(RVA = "0x2C5C308", Offset = "0x2C5C308", VA = "0x2C5C308")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x17000027 RID: 39
+	// (get) Token: 0x06000142 RID: 322 RVA: 0x00002880 File Offset: 0x00000A80
+	// (set) Token: 0x06000141 RID: 321 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000027")]
+	public XORFloat PerfectHP
+	{
+		[Token(Token = "0x6000142")]
+		[Address(RVA = "0x2C5C3D4", Offset = "0x2C5C3D4", VA = "0x2C5C3D4")]
+		[CompilerGenerated]
+		get
+		{
+			return default(XORFloat);
+		}
+		[Token(Token = "0x6000141")]
+		[Address(RVA = "0x2C5C3C0", Offset = "0x2C5C3C0", VA = "0x2C5C3C0")]
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	// Token: 0x17000028 RID: 40
+	// (get) Token: 0x06000144 RID: 324 RVA: 0x00002898 File Offset: 0x00000A98
+	// (set) Token: 0x06000143 RID: 323 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000028")]
+	public XORFloat PerfectMaxHP
+	{
+		[Token(Token = "0x6000144")]
+		[Address(RVA = "0x2C5C400", Offset = "0x2C5C400", VA = "0x2C5C400")]
+		[CompilerGenerated]
+		get
+		{
+			return default(XORFloat);
+		}
+		[Token(Token = "0x6000143")]
+		[Address(RVA = "0x2C5C3E8", Offset = "0x2C5C3E8", VA = "0x2C5C3E8")]
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	// Token: 0x17000029 RID: 41
+	// (get) Token: 0x06000145 RID: 325 RVA: 0x000028B0 File Offset: 0x00000AB0
+	[Token(Token = "0x17000029")]
+	public double MaxHP
+	{
+		[Token(Token = "0x6000145")]
+		[Address(RVA = "0x2C4E8E0", Offset = "0x2C4E8E0", VA = "0x2C4E8E0")]
+		get
+		{
+			return 0.0;
+		}
+	}
+
+	// Token: 0x1700002A RID: 42
+	// (get) Token: 0x06000147 RID: 327 RVA: 0x000028C8 File Offset: 0x00000AC8
+	// (set) Token: 0x06000146 RID: 326 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700002A")]
+	public double MP
+	{
+		[Token(Token = "0x6000147")]
+		[Address(RVA = "0x2C5B740", Offset = "0x2C5B740", VA = "0x2C5B740")]
+		get
+		{
+			return 0.0;
+		}
+		[Token(Token = "0x6000146")]
+		[Address(RVA = "0x2C5B7CC", Offset = "0x2C5B7CC", VA = "0x2C5B7CC")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x1700002B RID: 43
+	// (get) Token: 0x06000148 RID: 328 RVA: 0x000028E0 File Offset: 0x00000AE0
+	[Token(Token = "0x1700002B")]
+	public int MaxMP
+	{
+		[Token(Token = "0x6000148")]
+		[Address(RVA = "0x2C5A360", Offset = "0x2C5A360", VA = "0x2C5A360")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x06000149 RID: 329 RVA: 0x000028F8 File Offset: 0x00000AF8
+	[Token(Token = "0x6000149")]
+	[Address(RVA = "0x2C5C868", Offset = "0x2C5C868", VA = "0x2C5C868")]
+	public double GetBaseHP(int level)
+	{
+		return 0.0;
+	}
+
+	// Token: 0x0600014A RID: 330 RVA: 0x00002910 File Offset: 0x00000B10
+	[Token(Token = "0x600014A")]
+	[Address(RVA = "0x2C5C418", Offset = "0x2C5C418", VA = "0x2C5C418")]
+	public double UpdateMaxHP()
+	{
+		return 0.0;
+	}
+
+	// Token: 0x0600014B RID: 331 RVA: 0x00002928 File Offset: 0x00000B28
+	[Token(Token = "0x600014B")]
+	[Address(RVA = "0x2C5CB10", Offset = "0x2C5CB10", VA = "0x2C5CB10")]
+	public double GetBaseMP(int level)
+	{
+		return 0.0;
+	}
+
+	// Token: 0x0600014C RID: 332 RVA: 0x00002940 File Offset: 0x00000B40
+	[Token(Token = "0x600014C")]
+	[Address(RVA = "0x2C5C6F4", Offset = "0x2C5C6F4", VA = "0x2C5C6F4")]
+	public double UpdateMaxMP()
+	{
+		return 0.0;
+	}
+
+	// Token: 0x0600014D RID: 333 RVA: 0x00002958 File Offset: 0x00000B58
+	[Token(Token = "0x600014D")]
+	[Address(RVA = "0x2C5CB90", Offset = "0x2C5CB90", VA = "0x2C5CB90")]
+	public int CostMagic(UnitObject unit, string magic)
+	{
+		return 0;
+	}
+
+	// Token: 0x0600014E RID: 334 RVA: 0x00002970 File Offset: 0x00000B70
+	[Token(Token = "0x600014E")]
+	[Address(RVA = "0x2C5C8E8", Offset = "0x2C5C8E8", VA = "0x2C5C8E8")]
+	private int GetCalcMaxMP()
+	{
+		return 0;
+	}
+
+	// Token: 0x0600014F RID: 335 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x600014F")]
+	[Address(RVA = "0x2C5CF04", Offset = "0x2C5CF04", VA = "0x2C5CF04")]
+	public static string GetDeckName()
+	{
+		return null;
+	}
+
+	// Token: 0x06000150 RID: 336 RVA: 0x00002988 File Offset: 0x00000B88
+	[Token(Token = "0x6000150")]
+	[Address(RVA = "0x2C5CFB8", Offset = "0x2C5CFB8", VA = "0x2C5CFB8")]
+	public static int GetDeckNumber()
+	{
+		return 0;
+	}
+
+	// Token: 0x06000151 RID: 337 RVA: 0x000029A0 File Offset: 0x00000BA0
+	[Token(Token = "0x6000151")]
+	[Address(RVA = "0x2C5D010", Offset = "0x2C5D010", VA = "0x2C5D010")]
+	public static int GetUnitOverridedLevel(string name)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000152 RID: 338 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000152")]
+	[Address(RVA = "0x2C5AD7C", Offset = "0x2C5AD7C", VA = "0x2C5AD7C")]
+	public static void RefreshUnitsItemSkill()
+	{
+	}
+
+	// Token: 0x1700002C RID: 44
+	// (get) Token: 0x06000153 RID: 339 RVA: 0x000029B8 File Offset: 0x00000BB8
+	// (set) Token: 0x06000154 RID: 340 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700002C")]
+	public override int Level
+	{
+		[Token(Token = "0x6000153")]
+		[Address(RVA = "0x2C5D0B0", Offset = "0x2C5D0B0", VA = "0x2C5D0B0", Slot = "15")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000154")]
+		[Address(RVA = "0x2C5D100", Offset = "0x2C5D100", VA = "0x2C5D100", Slot = "16")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x1700002D RID: 45
+	// (get) Token: 0x06000156 RID: 342 RVA: 0x000029D0 File Offset: 0x00000BD0
+	// (set) Token: 0x06000155 RID: 341 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700002D")]
+	public static int CastleLevel
+	{
+		[Token(Token = "0x6000156")]
+		[Address(RVA = "0x2C599E0", Offset = "0x2C599E0", VA = "0x2C599E0")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000155")]
+		[Address(RVA = "0x2C59ECC", Offset = "0x2C59ECC", VA = "0x2C59ECC")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x06000157 RID: 343 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000157")]
+	[Address(RVA = "0x2C5D160", Offset = "0x2C5D160", VA = "0x2C5D160")]
+	private static void checkCheat()
+	{
+	}
+
+	// Token: 0x06000158 RID: 344 RVA: 0x000029E8 File Offset: 0x00000BE8
+	[Token(Token = "0x6000158")]
+	[Address(RVA = "0x2C5D388", Offset = "0x2C5D388", VA = "0x2C5D388")]
+	public static bool LevelUp()
+	{
+		return default(bool);
+	}
+
+	// Token: 0x06000159 RID: 345 RVA: 0x00002A00 File Offset: 0x00000C00
+	[Token(Token = "0x6000159")]
+	[Address(RVA = "0x2C5D4BC", Offset = "0x2C5D4BC", VA = "0x2C5D4BC")]
+	public static bool QuickLevelUp(int number)
+	{
+		return default(bool);
+	}
+
+	// Token: 0x1700002E RID: 46
+	// (get) Token: 0x0600015A RID: 346 RVA: 0x00002A18 File Offset: 0x00000C18
+	[Token(Token = "0x1700002E")]
+	public static long LevelUpPrice
+	{
+		[Token(Token = "0x600015A")]
+		[Address(RVA = "0x2C5D464", Offset = "0x2C5D464", VA = "0x2C5D464")]
+		get
+		{
+			return 0L;
+		}
+	}
+
+	// Token: 0x0600015B RID: 347 RVA: 0x00002A30 File Offset: 0x00000C30
+	[Token(Token = "0x600015B")]
+	[Address(RVA = "0x2C5D5A8", Offset = "0x2C5D5A8", VA = "0x2C5D5A8")]
+	public static long CalcQuickLevelUpPrice(int number)
+	{
+		return 0L;
+	}
+
+	// Token: 0x0600015C RID: 348 RVA: 0x00002A48 File Offset: 0x00000C48
+	[Token(Token = "0x600015C")]
+	[Address(RVA = "0x2C5D640", Offset = "0x2C5D640", VA = "0x2C5D640")]
+	private static long CalcLevelUpPrice(long level)
+	{
+		return 0L;
+	}
+
+	// Token: 0x1700002F RID: 47
+	// (get) Token: 0x0600015D RID: 349 RVA: 0x00002A60 File Offset: 0x00000C60
+	[Token(Token = "0x1700002F")]
+	public static bool HasAttackingMonster
+	{
+		[Token(Token = "0x600015D")]
+		[Address(RVA = "0x2C5D6F4", Offset = "0x2C5D6F4", VA = "0x2C5D6F4")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x17000030 RID: 48
+	// (get) Token: 0x0600015E RID: 350 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x17000030")]
+	public static UnitObject AnyAttackingMonster
+	{
+		[Token(Token = "0x600015E")]
+		[Address(RVA = "0x2C5D778", Offset = "0x2C5D778", VA = "0x2C5D778")]
+		get
+		{
+			return null;
+		}
+	}
+
+	// Token: 0x0600015F RID: 351 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600015F")]
+	[Address(RVA = "0x2C5D820", Offset = "0x2C5D820", VA = "0x2C5D820")]
+	public static void Save()
+	{
+	}
+
+	// Token: 0x06000160 RID: 352 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000160")]
+	[Address(RVA = "0x2C5D8E8", Offset = "0x2C5D8E8", VA = "0x2C5D8E8")]
+	public static void Load()
+	{
+	}
+
+	// Token: 0x06000161 RID: 353 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000161")]
+	[Address(RVA = "0x2C59FF4", Offset = "0x2C59FF4", VA = "0x2C59FF4")]
+	public static void initBaseItem()
+	{
+	}
+
+	// Token: 0x06000162 RID: 354 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000162")]
+	[Address(RVA = "0x2C5DC58", Offset = "0x2C5DC58", VA = "0x2C5DC58")]
+	public static void Refresh()
+	{
+	}
+
+	// Token: 0x06000163 RID: 355 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000163")]
+	[Address(RVA = "0x2C5E0D8", Offset = "0x2C5E0D8", VA = "0x2C5E0D8")]
+	private static void OnChangeItem(int code)
+	{
+	}
+
+	// Token: 0x06000164 RID: 356 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000164")]
+	[Address(RVA = "0x2C5DD2C", Offset = "0x2C5DD2C", VA = "0x2C5DD2C")]
+	private static void RefreshLeader()
+	{
+	}
+
+	// Token: 0x17000031 RID: 49
+	// (get) Token: 0x06000165 RID: 357 RVA: 0x00002A78 File Offset: 0x00000C78
+	// (set) Token: 0x06000166 RID: 358 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000031")]
+	public bool IsTakenDamage
+	{
+		[Token(Token = "0x6000165")]
+		[Address(RVA = "0x2C5E1FC", Offset = "0x2C5E1FC", VA = "0x2C5E1FC")]
+		get
+		{
+			return default(bool);
+		}
+		[Token(Token = "0x6000166")]
+		[Address(RVA = "0x2C5AD34", Offset = "0x2C5AD34", VA = "0x2C5AD34")]
+		private set
+		{
+		}
+	}
+
+	// Token: 0x06000167 RID: 359 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000167")]
+	[Address(RVA = "0x2C5E234", Offset = "0x2C5E234", VA = "0x2C5E234")]
+	public void IncreaseDefense(float value)
+	{
+	}
+
+	// Token: 0x06000168 RID: 360 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000168")]
+	[Address(RVA = "0x2C5E294", Offset = "0x2C5E294", VA = "0x2C5E294")]
+	public void DecreaseDefense(float value)
+	{
+	}
+
+	// Token: 0x06000169 RID: 361 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000169")]
+	[Address(RVA = "0x2C5DF6C", Offset = "0x2C5DF6C", VA = "0x2C5DF6C")]
+	private void OnChangedSlot(int f, int i, int code)
+	{
+	}
+
+	// Token: 0x0600016A RID: 362 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600016A")]
+	[Address(RVA = "0x2C59A78", Offset = "0x2C59A78", VA = "0x2C59A78")]
+	private void UpdateSprite(int level)
+	{
+	}
+
+	// Token: 0x17000032 RID: 50
+	// (get) Token: 0x0600016B RID: 363 RVA: 0x00002A90 File Offset: 0x00000C90
+	[Token(Token = "0x17000032")]
+	public bool IsEquippedAny
+	{
+		[Token(Token = "0x600016B")]
+		[Address(RVA = "0x2C5E304", Offset = "0x2C5E304", VA = "0x2C5E304")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x17000033 RID: 51
+	// (get) Token: 0x0600016C RID: 364 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x17000033")]
+	public static CastleData SaveData
+	{
+		[Token(Token = "0x600016C")]
+		[Address(RVA = "0x2C5E368", Offset = "0x2C5E368", VA = "0x2C5E368")]
+		get
+		{
+			return null;
+		}
+	}
+
+	// Token: 0x0600016D RID: 365 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x600016D")]
+	[Address(RVA = "0x2C5E3C4", Offset = "0x2C5E3C4", VA = "0x2C5E3C4")]
+	public Castle()
+	{
+	}
+
+	// Token: 0x0400011C RID: 284
+	[Token(Token = "0x400011C")]
+	[FieldOffset(Offset = "0x0")]
+	private static Castle _self;
+
+	// Token: 0x0400011D RID: 285
+	[Token(Token = "0x400011D")]
+	[FieldOffset(Offset = "0x8")]
+	private static string Key;
+
+	// Token: 0x0400011E RID: 286
+	[Token(Token = "0x400011E")]
+	[FieldOffset(Offset = "0x10")]
+	private static CastleData _data;
+
+	// Token: 0x0400011F RID: 287
+	[Token(Token = "0x400011F")]
+	public const float Enterance = 5f;
+
+	// Token: 0x04000120 RID: 288
+	[Token(Token = "0x4000120")]
+	[FieldOffset(Offset = "0x168")]
+	public SpriteCastle spriteCastle;
+
+	// Token: 0x04000121 RID: 289
+	[Token(Token = "0x4000121")]
+	[FieldOffset(Offset = "0x170")]
+	public SkeletonCastle skeletonCastle;
+
+	// Token: 0x04000122 RID: 290
+	[Token(Token = "0x4000122")]
+	[FieldOffset(Offset = "0x178")]
+	protected BaseCastle baseCastle;
+
+	// Token: 0x04000123 RID: 291
+	[Token(Token = "0x4000123")]
+	[FieldOffset(Offset = "0x180")]
+	private XORDouble _hp;
+
+	// Token: 0x04000124 RID: 292
+	[Token(Token = "0x4000124")]
+	[FieldOffset(Offset = "0x1A8")]
+	private XORDouble _mp;
+
+	// Token: 0x04000125 RID: 293
+	[Token(Token = "0x4000125")]
+	[FieldOffset(Offset = "0x1D0")]
+	protected List<UnitObject> _cachedAttackingMonsterList;
+
+	// Token: 0x04000126 RID: 294
+	[Token(Token = "0x4000126")]
+	[FieldOffset(Offset = "0x1D8")]
+	protected Dictionary<int, UnitObject> _cachedAttackingMosnterTable;
+
+	// Token: 0x04000129 RID: 297
+	[Token(Token = "0x4000129")]
+	[FieldOffset(Offset = "0x1E0")]
+	private bool hasMonsterResearch;
+
+	// Token: 0x0400012A RID: 298
+	[Token(Token = "0x400012A")]
+	[FieldOffset(Offset = "0x1E4")]
+	private XORFloat defense;
+
+	// Token: 0x0400012B RID: 299
+	[Token(Token = "0x400012B")]
+	[FieldOffset(Offset = "0x1F8")]
+	private XORFloat rangedDefense;
+
+	// Token: 0x0400012C RID: 300
+	[Token(Token = "0x400012C")]
+	[FieldOffset(Offset = "0x20C")]
+	private XORFloat _cachedMPRecovery;
+
+	// Token: 0x0400012F RID: 303
+	[Token(Token = "0x400012F")]
+	[FieldOffset(Offset = "0x248")]
+	private XORLong _cachedMaxHP;
+
+	// Token: 0x04000130 RID: 304
+	[Token(Token = "0x4000130")]
+	[FieldOffset(Offset = "0x270")]
+	private XORInt _cachedMaxMP;
+
+	// Token: 0x04000131 RID: 305
+	[Token(Token = "0x4000131")]
+	[FieldOffset(Offset = "0x284")]
+	private XORBool _isEquippedSealedSoul;
+
+	// Token: 0x04000132 RID: 306
+	[Token(Token = "0x4000132")]
+	[FieldOffset(Offset = "0x28")]
+	private static ObscuredInt _castleLevel;
+
+	// Token: 0x04000133 RID: 307
+	[Token(Token = "0x4000133")]
+	[FieldOffset(Offset = "0x30")]
+	public static Action<long, long> OnCheat;
+
+	// Token: 0x04000134 RID: 308
+	[Token(Token = "0x4000134")]
+	[FieldOffset(Offset = "0x298")]
+	private XORBool _isTakenDamage;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+using System;
+using System.Collections;
+using Il2CppDummyDll;
+using XOREnc;
+
+// Token: 0x020004BD RID: 1213
+[Token(Token = "0x20004BD")]
+public class ColonyCastle : UnitObject
+{
+	// Token: 0x060018E3 RID: 6371 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60018E3")]
+	[Address(RVA = "0x2D1B670", Offset = "0x2D1B670", VA = "0x2D1B670", Slot = "6")]
+	protected override void Awake()
+	{
+	}
+
+	// Token: 0x060018E4 RID: 6372 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60018E4")]
+	[Address(RVA = "0x2D1B6A8", Offset = "0x2D1B6A8", VA = "0x2D1B6A8", Slot = "7")]
+	public override void AwakePoolItem()
+	{
+	}
+
+	// Token: 0x060018E5 RID: 6373 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60018E5")]
+	[Address(RVA = "0x2D1B90C", Offset = "0x2D1B90C", VA = "0x2D1B90C", Slot = "8")]
+	public override void OnReleasePoolItem()
+	{
+	}
+
+	// Token: 0x060018E6 RID: 6374 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60018E6")]
+	[Address(RVA = "0x2D1B940", Offset = "0x2D1B940", VA = "0x2D1B940", Slot = "60")]
+	public virtual void OnGenerated()
+	{
+	}
+
+	// Token: 0x060018E7 RID: 6375 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60018E7")]
+	[Address(RVA = "0x2D1B944", Offset = "0x2D1B944", VA = "0x2D1B944", Slot = "23")]
+	public override void takeDamage(Damage damage)
+	{
+	}
+
+	// Token: 0x060018E8 RID: 6376 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60018E8")]
+	[Address(RVA = "0x2D1BDA0", Offset = "0x2D1BDA0", VA = "0x2D1BDA0")]
+	private IEnumerator coDotDamageUpdater()
+	{
+		return null;
+	}
+
+	// Token: 0x17000298 RID: 664
+	// (get) Token: 0x060018E9 RID: 6377 RVA: 0x00009030 File Offset: 0x00007230
+	[Token(Token = "0x17000298")]
+	public long MaxHP
+	{
+		[Token(Token = "0x60018E9")]
+		[Address(RVA = "0x2D1BE4C", Offset = "0x2D1BE4C", VA = "0x2D1BE4C")]
+		get
+		{
+			return 0L;
+		}
+	}
+
+	// Token: 0x17000299 RID: 665
+	// (get) Token: 0x060018EA RID: 6378 RVA: 0x00009048 File Offset: 0x00007248
+	[Token(Token = "0x17000299")]
+	public long HPInt
+	{
+		[Token(Token = "0x60018EA")]
+		[Address(RVA = "0x2D1BE6C", Offset = "0x2D1BE6C", VA = "0x2D1BE6C")]
+		get
+		{
+			return 0L;
+		}
+	}
+
+	// Token: 0x1700029A RID: 666
+	// (get) Token: 0x060018EB RID: 6379 RVA: 0x00009060 File Offset: 0x00007260
+	[Token(Token = "0x1700029A")]
+	public override double HP
+	{
+		[Token(Token = "0x60018EB")]
+		[Address(RVA = "0x2D1BE8C", Offset = "0x2D1BE8C", VA = "0x2D1BE8C", Slot = "36")]
+		get
+		{
+			return 0.0;
+		}
+	}
+
+	// Token: 0x1700029B RID: 667
+	// (get) Token: 0x060018EC RID: 6380 RVA: 0x00009078 File Offset: 0x00007278
+	[Token(Token = "0x1700029B")]
+	public new bool IsDead
+	{
+		[Token(Token = "0x60018EC")]
+		[Address(RVA = "0x2D1BEB4", Offset = "0x2D1BEB4", VA = "0x2D1BEB4")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x060018ED RID: 6381 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60018ED")]
+	[Address(RVA = "0x2D1BEE8", Offset = "0x2D1BEE8", VA = "0x2D1BEE8")]
+	public ColonyCastle()
+	{
+	}
+
+	// Token: 0x040015B5 RID: 5557
+	[Token(Token = "0x40015B5")]
+	[FieldOffset(Offset = "0x168")]
+	private DotDamage dotDamage;
+
+	// Token: 0x040015B6 RID: 5558
+	[Token(Token = "0x40015B6")]
+	[FieldOffset(Offset = "0x170")]
+	protected ObscuredLong hp;
+
+	// Token: 0x040015B7 RID: 5559
+	[Token(Token = "0x40015B7")]
+	[FieldOffset(Offset = "0x178")]
+	protected ObscuredLong maxHP;
+
+	// Token: 0x040015B8 RID: 5560
+	[Token(Token = "0x40015B8")]
+	[FieldOffset(Offset = "0x180")]
+	protected XORBool isDead;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using Il2CppDummyDll;
+using Spine.Unity;
+
+// Token: 0x0200015C RID: 348
+[Token(Token = "0x200015C")]
+public class Monsters : Dictionary<string, Monsters.Data>
+{
+	// Token: 0x170000D3 RID: 211
+	[Token(Token = "0x170000D3")]
+	public new Monsters.Data this[string key]
+	{
+		[Token(Token = "0x60006A6")]
+		[Address(RVA = "0x2E02700", Offset = "0x2E02700", VA = "0x2E02700")]
+		get
+		{
+			return null;
+		}
+	}
+
+	// Token: 0x170000D4 RID: 212
+	[Token(Token = "0x170000D4")]
+	public Monsters.Data this[int code]
+	{
+		[Token(Token = "0x60006A7")]
+		[Address(RVA = "0x2E0277C", Offset = "0x2E0277C", VA = "0x2E0277C")]
+		get
+		{
+			return null;
+		}
+	}
+
+	// Token: 0x060006A8 RID: 1704 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60006A8")]
+	[Address(RVA = "0x2E027E0", Offset = "0x2E027E0", VA = "0x2E027E0")]
+	public List<int> GetNormals(long difficult)
+	{
+		return null;
+	}
+
+	// Token: 0x060006A9 RID: 1705 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60006A9")]
+	[Address(RVA = "0x2E02994", Offset = "0x2E02994", VA = "0x2E02994")]
+	public List<int> GetExtrases(long difficult, bool ignoreInterval = false)
+	{
+		return null;
+	}
+
+	// Token: 0x060006AA RID: 1706 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60006AA")]
+	[Address(RVA = "0x2E029A0", Offset = "0x2E029A0", VA = "0x2E029A0")]
+	public List<int> GetChampions(long difficult)
+	{
+		return null;
+	}
+
+	// Token: 0x060006AB RID: 1707 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60006AB")]
+	[Address(RVA = "0x2E029AC", Offset = "0x2E029AC", VA = "0x2E029AC")]
+	public List<int> GetResistances(long difficult)
+	{
+		return null;
+	}
+
+	// Token: 0x060006AC RID: 1708 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x60006AC")]
+	[Address(RVA = "0x2E027EC", Offset = "0x2E027EC", VA = "0x2E027EC")]
+	private List<int> Select(long difficult, List<int> from, bool ignoreInterval = false)
+	{
+		return null;
+	}
+
+	// Token: 0x060006AD RID: 1709 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60006AD")]
+	[Address(RVA = "0x2E029B8", Offset = "0x2E029B8", VA = "0x2E029B8")]
+	[OnDeserialized]
+	private void OnDeserialized(StreamingContext context)
+	{
+	}
+
+	// Token: 0x060006AE RID: 1710 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60006AE")]
+	[Address(RVA = "0x2E032A4", Offset = "0x2E032A4", VA = "0x2E032A4")]
+	public Monsters()
+	{
+	}
+
+	// Token: 0x040006F8 RID: 1784
+	[Token(Token = "0x40006F8")]
+	[FieldOffset(Offset = "0x50")]
+	public List<int> _monsters;
+
+	// Token: 0x040006F9 RID: 1785
+	[Token(Token = "0x40006F9")]
+	[FieldOffset(Offset = "0x58")]
+	public List<int> _extraMonsters;
+
+	// Token: 0x040006FA RID: 1786
+	[Token(Token = "0x40006FA")]
+	[FieldOffset(Offset = "0x60")]
+	public List<int> _flyingMonsters;
+
+	// Token: 0x040006FB RID: 1787
+	[Token(Token = "0x40006FB")]
+	[FieldOffset(Offset = "0x68")]
+	public List<int> _champions;
+
+	// Token: 0x040006FC RID: 1788
+	[Token(Token = "0x40006FC")]
+	[FieldOffset(Offset = "0x70")]
+	public List<int> _bosses;
+
+	// Token: 0x040006FD RID: 1789
+	[Token(Token = "0x40006FD")]
+	[FieldOffset(Offset = "0x78")]
+	public List<int> _resistance;
+
+	// Token: 0x040006FE RID: 1790
+	[Token(Token = "0x40006FE")]
+	[FieldOffset(Offset = "0x80")]
+	private Dictionary<int, Monsters.Data> collectionByCode;
+
+	// Token: 0x040006FF RID: 1791
+	[Token(Token = "0x40006FF")]
+	public const int MaxResearchKills = 1000;
+
+	// Token: 0x0200015D RID: 349
+	[Token(Token = "0x200015D")]
+	public class Data
+	{
+		// Token: 0x170000D5 RID: 213
+		// (get) Token: 0x060006AF RID: 1711 RVA: 0x00002142 File Offset: 0x00000342
+		[Token(Token = "0x170000D5")]
+		public SkeletonDataAsset SkeletonData
+		{
+			[Token(Token = "0x60006AF")]
+			[Address(RVA = "0x2E0334C", Offset = "0x2E0334C", VA = "0x2E0334C")]
+			get
+			{
+				return null;
+			}
+		}
+
+		// Token: 0x060006B0 RID: 1712 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x60006B0")]
+		[Address(RVA = "0x2E03458", Offset = "0x2E03458", VA = "0x2E03458")]
+		public Data()
+		{
+		}
+
+		// Token: 0x04000700 RID: 1792
+		[Token(Token = "0x4000700")]
+		[FieldOffset(Offset = "0x10")]
+		public string Name;
+
+		// Token: 0x04000701 RID: 1793
+		[Token(Token = "0x4000701")]
+		[FieldOffset(Offset = "0x18")]
+		public int Code;
+
+		// Token: 0x04000702 RID: 1794
+		[Token(Token = "0x4000702")]
+		[FieldOffset(Offset = "0x20")]
+		public double HP;
+
+		// Token: 0x04000703 RID: 1795
+		[Token(Token = "0x4000703")]
+		[FieldOffset(Offset = "0x28")]
+		public float Speed;
+
+		// Token: 0x04000704 RID: 1796
+		[Token(Token = "0x4000704")]
+		[FieldOffset(Offset = "0x2C")]
+		public int Damage;
+
+		// Token: 0x04000705 RID: 1797
+		[Token(Token = "0x4000705")]
+		[FieldOffset(Offset = "0x30")]
+		public float AttackSpeed;
+
+		// Token: 0x04000706 RID: 1798
+		[Token(Token = "0x4000706")]
+		[FieldOffset(Offset = "0x34")]
+		public float Range;
+
+		// Token: 0x04000707 RID: 1799
+		[Token(Token = "0x4000707")]
+		[FieldOffset(Offset = "0x38")]
+		public long Exp;
+
+		// Token: 0x04000708 RID: 1800
+		[Token(Token = "0x4000708")]
+		[FieldOffset(Offset = "0x40")]
+		public long Gold;
+
+		// Token: 0x04000709 RID: 1801
+		[Token(Token = "0x4000709")]
+		[FieldOffset(Offset = "0x48")]
+		public float FireResistance;
+
+		// Token: 0x0400070A RID: 1802
+		[Token(Token = "0x400070A")]
+		[FieldOffset(Offset = "0x4C")]
+		public float LightningResistance;
+
+		// Token: 0x0400070B RID: 1803
+		[Token(Token = "0x400070B")]
+		[FieldOffset(Offset = "0x50")]
+		public float ColdResistance;
+
+		// Token: 0x0400070C RID: 1804
+		[Token(Token = "0x400070C")]
+		[FieldOffset(Offset = "0x54")]
+		public float PoisonResistance;
+
+		// Token: 0x0400070D RID: 1805
+		[Token(Token = "0x400070D")]
+		[FieldOffset(Offset = "0x58")]
+		public float PhysicsResistance;
+
+		// Token: 0x0400070E RID: 1806
+		[Token(Token = "0x400070E")]
+		[FieldOffset(Offset = "0x5C")]
+		public float Frost;
+
+		// Token: 0x0400070F RID: 1807
+		[Token(Token = "0x400070F")]
+		[FieldOffset(Offset = "0x60")]
+		public string Type;
+
+		// Token: 0x04000710 RID: 1808
+		[Token(Token = "0x4000710")]
+		[FieldOffset(Offset = "0x68")]
+		public WalkType WalkType;
+
+		// Token: 0x04000711 RID: 1809
+		[Token(Token = "0x4000711")]
+		[FieldOffset(Offset = "0x6C")]
+		public WalkType AttackType;
+
+		// Token: 0x04000712 RID: 1810
+		[Token(Token = "0x4000712")]
+		[FieldOffset(Offset = "0x70")]
+		public string Prefab;
+
+		// Token: 0x04000713 RID: 1811
+		[Token(Token = "0x4000713")]
+		[FieldOffset(Offset = "0x78")]
+		public string Skin;
+
+		// Token: 0x04000714 RID: 1812
+		[Token(Token = "0x4000714")]
+		[FieldOffset(Offset = "0x80")]
+		public int Wave;
+
+		// Token: 0x04000715 RID: 1813
+		[Token(Token = "0x4000715")]
+		[FieldOffset(Offset = "0x84")]
+		public int Interval;
+
+		// Token: 0x04000716 RID: 1814
+		[Token(Token = "0x4000716")]
+		[FieldOffset(Offset = "0x88")]
+		public string Weapon;
+
+		// Token: 0x04000717 RID: 1815
+		[Token(Token = "0x4000717")]
+		[FieldOffset(Offset = "0x90")]
+		public float Knockback;
+
+		// Token: 0x04000718 RID: 1816
+		[Token(Token = "0x4000718")]
+		[FieldOffset(Offset = "0x98")]
+		public List<string> Drop;
+
+		// Token: 0x04000719 RID: 1817
+		[Token(Token = "0x4000719")]
+		[FieldOffset(Offset = "0xA0")]
+		public List<Weak> AntiWeak;
+
+		// Token: 0x0400071A RID: 1818
+		[Token(Token = "0x400071A")]
+		[FieldOffset(Offset = "0xA8")]
+		public List<string> Skills;
+
+		// Token: 0x0400071B RID: 1819
+		[Token(Token = "0x400071B")]
+		[FieldOffset(Offset = "0xB0")]
+		public List<Monsters.DropItem> DropableItems;
+	}
+
+	// Token: 0x0200015E RID: 350
+	[Token(Token = "0x200015E")]
+	public struct DropItem
+	{
+		// Token: 0x0400071C RID: 1820
+		[Token(Token = "0x400071C")]
+		[FieldOffset(Offset = "0x0")]
+		public string item;
+
+		// Token: 0x0400071D RID: 1821
+		[Token(Token = "0x400071D")]
+		[FieldOffset(Offset = "0x8")]
+		public float chance;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------
+
+
+using System;
+using System.Runtime.CompilerServices;
+using Cysharp.Threading.Tasks;
+using Il2CppDummyDll;
+using XOREnc;
+
+// Token: 0x020001F6 RID: 502
+[Token(Token = "0x20001F6")]
+public class GameSpeed
+{
+	// Token: 0x14000026 RID: 38
+	// (add) Token: 0x06000A51 RID: 2641 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000A52 RID: 2642 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x14000026")]
+	public static event Action<float> OnChange
+	{
+		[Token(Token = "0x6000A51")]
+		[Address(RVA = "0x2E4DE9C", Offset = "0x2E4DE9C", VA = "0x2E4DE9C")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000A52")]
+		[Address(RVA = "0x2E4DF98", Offset = "0x2E4DF98", VA = "0x2E4DF98")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x1700017F RID: 383
+	// (get) Token: 0x06000A53 RID: 2643 RVA: 0x000057A8 File Offset: 0x000039A8
+	[Token(Token = "0x1700017F")]
+	public static float Value
+	{
+		[Token(Token = "0x6000A53")]
+		[Address(RVA = "0x2E4E094", Offset = "0x2E4E094", VA = "0x2E4E094")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x06000A54 RID: 2644 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A54")]
+	[Address(RVA = "0x2E45920", Offset = "0x2E45920", VA = "0x2E45920")]
+	public static void Init()
+	{
+	}
+
+	// Token: 0x06000A55 RID: 2645 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A55")]
+	[Address(RVA = "0x2E4E254", Offset = "0x2E4E254", VA = "0x2E4E254")]
+	private static void OnStartBattle()
+	{
+	}
+
+	// Token: 0x06000A56 RID: 2646 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A56")]
+	[Address(RVA = "0x2E4E484", Offset = "0x2E4E484", VA = "0x2E4E484")]
+	private static void OnCompleteBattle()
+	{
+	}
+
+	// Token: 0x06000A57 RID: 2647 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A57")]
+	[Address(RVA = "0x2E4E538", Offset = "0x2E4E538", VA = "0x2E4E538")]
+	public static void Next()
+	{
+	}
+
+	// Token: 0x17000180 RID: 384
+	// (get) Token: 0x06000A58 RID: 2648 RVA: 0x000057C0 File Offset: 0x000039C0
+	[Token(Token = "0x17000180")]
+	public static float MaxValue
+	{
+		[Token(Token = "0x6000A58")]
+		[Address(RVA = "0x2E4E418", Offset = "0x2E4E418", VA = "0x2E4E418")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x06000A59 RID: 2649 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A59")]
+	[Address(RVA = "0x2E380C8", Offset = "0x2E380C8", VA = "0x2E380C8")]
+	public static void TrySetValue(float value, bool applyBonus = true)
+	{
+	}
+
+	// Token: 0x06000A5A RID: 2650 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A5A")]
+	[Address(RVA = "0x2E4E628", Offset = "0x2E4E628", VA = "0x2E4E628")]
+	public static void ApplyBonus(float value, float duration)
+	{
+	}
+
+	// Token: 0x06000A5B RID: 2651 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A5B")]
+	[Address(RVA = "0x2E4E4E0", Offset = "0x2E4E4E0", VA = "0x2E4E4E0")]
+	public static void ClearBonus()
+	{
+	}
+
+	// Token: 0x06000A5C RID: 2652 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A5C")]
+	[Address(RVA = "0x2E4E734", Offset = "0x2E4E734", VA = "0x2E4E734")]
+	public static void Update()
+	{
+	}
+
+	// Token: 0x06000A5D RID: 2653 RVA: 0x000057D8 File Offset: 0x000039D8
+	[Token(Token = "0x6000A5D")]
+	[Address(RVA = "0x2E4E110", Offset = "0x2E4E110", VA = "0x2E4E110")]
+	private static UniTask<int> BonusDurationUpdater()
+	{
+		return default(UniTask<int>);
+	}
+
+	// Token: 0x06000A5E RID: 2654 RVA: 0x000057F0 File Offset: 0x000039F0
+	[Token(Token = "0x6000A5E")]
+	[Address(RVA = "0x2E4E1B0", Offset = "0x2E4E1B0", VA = "0x2E4E1B0")]
+	private static UniTask<int> BattleMonitor()
+	{
+		return default(UniTask<int>);
+	}
+
+	// Token: 0x17000181 RID: 385
+	// (get) Token: 0x06000A5F RID: 2655 RVA: 0x00005808 File Offset: 0x00003A08
+	[Token(Token = "0x17000181")]
+	public static float BonusDuration
+	{
+		[Token(Token = "0x6000A5F")]
+		[Address(RVA = "0x2E4E7B8", Offset = "0x2E4E7B8", VA = "0x2E4E7B8")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x17000182 RID: 386
+	// (get) Token: 0x06000A60 RID: 2656 RVA: 0x00005820 File Offset: 0x00003A20
+	[Token(Token = "0x17000182")]
+	public static float TotalBonusRealTime
+	{
+		[Token(Token = "0x6000A60")]
+		[Address(RVA = "0x2E4E834", Offset = "0x2E4E834", VA = "0x2E4E834")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x17000183 RID: 387
+	// (get) Token: 0x06000A61 RID: 2657 RVA: 0x00005838 File Offset: 0x00003A38
+	[Token(Token = "0x17000183")]
+	public static float TotalBonusTime
+	{
+		[Token(Token = "0x6000A61")]
+		[Address(RVA = "0x2E4E8B0", Offset = "0x2E4E8B0", VA = "0x2E4E8B0")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x17000184 RID: 388
+	// (get) Token: 0x06000A62 RID: 2658 RVA: 0x00005850 File Offset: 0x00003A50
+	[Token(Token = "0x17000184")]
+	public static float LastBonusValue
+	{
+		[Token(Token = "0x6000A62")]
+		[Address(RVA = "0x2E4E92C", Offset = "0x2E4E92C", VA = "0x2E4E92C")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x06000A63 RID: 2659 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000A63")]
+	[Address(RVA = "0x2E4E9A8", Offset = "0x2E4E9A8", VA = "0x2E4E9A8")]
+	public GameSpeed()
+	{
+	}
+
+	// Token: 0x04000A21 RID: 2593
+	[Token(Token = "0x4000A21")]
+	[FieldOffset(Offset = "0x8")]
+	private static XORFloat baseValue;
+
+	// Token: 0x04000A22 RID: 2594
+	[Token(Token = "0x4000A22")]
+	[FieldOffset(Offset = "0x1C")]
+	private static XORFloat totalValue;
+
+	// Token: 0x04000A23 RID: 2595
+	[Token(Token = "0x4000A23")]
+	[FieldOffset(Offset = "0x30")]
+	private static XORFloat bonusValue;
+
+	// Token: 0x04000A24 RID: 2596
+	[Token(Token = "0x4000A24")]
+	[FieldOffset(Offset = "0x44")]
+	private static XORFloat bonusDuration;
+
+	// Token: 0x04000A25 RID: 2597
+	[Token(Token = "0x4000A25")]
+	[FieldOffset(Offset = "0x58")]
+	private static XORFloat totalBonusRealTime;
+
+	// Token: 0x04000A26 RID: 2598
+	[Token(Token = "0x4000A26")]
+	[FieldOffset(Offset = "0x6C")]
+	private static XORFloat totalBonusTime;
+
+	// Token: 0x04000A27 RID: 2599
+	[Token(Token = "0x4000A27")]
+	[FieldOffset(Offset = "0x80")]
+	private static XORFloat lastBonusValue;
+}
+
+
+
+
+
+
+
+
+
+
+
+----------------------------
+
+
+using System;
+using System.Collections;
+using System.Runtime.InteropServices;
+using Il2CppDummyDll;
+using Spine;
+using UnityEngine;
+using XOREnc;
+
+// Token: 0x020004F0 RID: 1264
+[Token(Token = "0x20004F0")]
+[RequireComponent(typeof(Rigidbody25D))]
+public class Monster : UnitObject
+{
+	// Token: 0x06001A5D RID: 6749 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A5D")]
+	[Address(RVA = "0x2D2DA84", Offset = "0x2D2DA84", VA = "0x2D2DA84", Slot = "6")]
+	protected override void Awake()
+	{
+	}
+
+	// Token: 0x06001A5E RID: 6750 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A5E")]
+	[Address(RVA = "0x2D2DD64", Offset = "0x2D2DD64", VA = "0x2D2DD64", Slot = "7")]
+	public override void AwakePoolItem()
+	{
+	}
+
+	// Token: 0x06001A5F RID: 6751 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A5F")]
+	[Address(RVA = "0x2D2E70C", Offset = "0x2D2E70C", VA = "0x2D2E70C", Slot = "8")]
+	public override void OnReleasePoolItem()
+	{
+	}
+
+	// Token: 0x06001A60 RID: 6752 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A60")]
+	[Address(RVA = "0x2D2E38C", Offset = "0x2D2E38C", VA = "0x2D2E38C")]
+	private void createHPBar()
+	{
+	}
+
+	// Token: 0x06001A61 RID: 6753 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A61")]
+	[Address(RVA = "0x2D2E8C8", Offset = "0x2D2E8C8", VA = "0x2D2E8C8", Slot = "60")]
+	protected virtual void onCreateHPBar()
+	{
+	}
+
+	// Token: 0x06001A62 RID: 6754 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A62")]
+	[Address(RVA = "0x2D2E7FC", Offset = "0x2D2E7FC", VA = "0x2D2E7FC")]
+	protected void releaseHPBar()
+	{
+	}
+
+	// Token: 0x06001A63 RID: 6755 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A63")]
+	[Address(RVA = "0x2D2E8CC", Offset = "0x2D2E8CC", VA = "0x2D2E8CC")]
+	protected void repositionHPBar()
+	{
+	}
+
+	// Token: 0x06001A64 RID: 6756 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A64")]
+	[Address(RVA = "0x2D2E834", Offset = "0x2D2E834", VA = "0x2D2E834")]
+	protected void releaseBuffStatus()
+	{
+	}
+
+	// Token: 0x06001A65 RID: 6757 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A65")]
+	[Address(RVA = "0x2D2E9D8", Offset = "0x2D2E9D8", VA = "0x2D2E9D8", Slot = "61")]
+	protected virtual void createBuffStatus()
+	{
+	}
+
+	// Token: 0x06001A66 RID: 6758 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A66")]
+	[Address(RVA = "0x2D2EB6C", Offset = "0x2D2EB6C", VA = "0x2D2EB6C", Slot = "62")]
+	protected virtual void onEventAttack(AnimationState state, int trackIndex, Event e)
+	{
+	}
+
+	// Token: 0x06001A67 RID: 6759 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A67")]
+	[Address(RVA = "0x2D2EB70", Offset = "0x2D2EB70", VA = "0x2D2EB70", Slot = "63")]
+	protected virtual void CustomFixedUpdate()
+	{
+	}
+
+	// Token: 0x06001A68 RID: 6760 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A68")]
+	[Address(RVA = "0x2D2EB74", Offset = "0x2D2EB74", VA = "0x2D2EB74")]
+	protected void CustomLateUpdate()
+	{
+	}
+
+	// Token: 0x06001A69 RID: 6761 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A69")]
+	[Address(RVA = "0x2D2ED58", Offset = "0x2D2ED58", VA = "0x2D2ED58", Slot = "64")]
+	protected virtual IEnumerator coAI()
+	{
+		return null;
+	}
+
+	// Token: 0x06001A6A RID: 6762 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A6A")]
+	[Address(RVA = "0x2D2EE04", Offset = "0x2D2EE04", VA = "0x2D2EE04", Slot = "42")]
+	protected override UnitObject SearchEnemy()
+	{
+		return null;
+	}
+
+	// Token: 0x06001A6B RID: 6763 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A6B")]
+	[Address(RVA = "0x2D2EF44", Offset = "0x2D2EF44", VA = "0x2D2EF44", Slot = "31")]
+	protected override void OnAttack(UnitObject target)
+	{
+	}
+
+	// Token: 0x06001A6C RID: 6764 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A6C")]
+	[Address(RVA = "0x2D2EFD8", Offset = "0x2D2EFD8", VA = "0x2D2EFD8", Slot = "65")]
+	protected virtual void DoAttract(UnitObject target)
+	{
+	}
+
+	// Token: 0x06001A6D RID: 6765 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A6D")]
+	[Address(RVA = "0x2D2F008", Offset = "0x2D2F008", VA = "0x2D2F008", Slot = "33")]
+	public override void TrySetTarget(UnitObject attacker)
+	{
+	}
+
+	// Token: 0x06001A6E RID: 6766 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A6E")]
+	[Address(RVA = "0x2D2F110", Offset = "0x2D2F110", VA = "0x2D2F110")]
+	public UnitObject getTargetUnit()
+	{
+		return null;
+	}
+
+	// Token: 0x06001A6F RID: 6767 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A6F")]
+	[Address(RVA = "0x2D2F118", Offset = "0x2D2F118", VA = "0x2D2F118")]
+	protected void StopMove(bool playIdleAnimation = false)
+	{
+	}
+
+	// Token: 0x06001A70 RID: 6768 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A70")]
+	[Address(RVA = "0x2D2F240", Offset = "0x2D2F240", VA = "0x2D2F240", Slot = "66")]
+	protected virtual void updateMoveToTarget(UnitObject target)
+	{
+	}
+
+	// Token: 0x06001A71 RID: 6769 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A71")]
+	[Address(RVA = "0x2D2F504", Offset = "0x2D2F504", VA = "0x2D2F504", Slot = "67")]
+	protected virtual IEnumerator coSyncPreHP()
+	{
+		return null;
+	}
+
+	// Token: 0x06001A72 RID: 6770 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A72")]
+	[Address(RVA = "0x2D2F5B0", Offset = "0x2D2F5B0", VA = "0x2D2F5B0", Slot = "23")]
+	public override void takeDamage(Damage damage)
+	{
+	}
+
+	// Token: 0x06001A73 RID: 6771 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A73")]
+	[Address(RVA = "0x2D2FEB4", Offset = "0x2D2FEB4", VA = "0x2D2FEB4")]
+	public void KillImmediate([Optional] UnitObject attacker)
+	{
+	}
+
+	// Token: 0x06001A74 RID: 6772 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A74")]
+	[Address(RVA = "0x2D30020", Offset = "0x2D30020", VA = "0x2D30020", Slot = "27")]
+	public override void knockBack(float value)
+	{
+	}
+
+	// Token: 0x06001A75 RID: 6773 RVA: 0x00009570 File Offset: 0x00007770
+	[Token(Token = "0x6001A75")]
+	[Address(RVA = "0x2D3004C", Offset = "0x2D3004C", VA = "0x2D3004C", Slot = "24")]
+	protected override Buff.Data OnPreAddBuff(Buff.Data buff)
+	{
+		return default(Buff.Data);
+	}
+
+	// Token: 0x06001A76 RID: 6774 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A76")]
+	[Address(RVA = "0x2D3022C", Offset = "0x2D3022C", VA = "0x2D3022C", Slot = "25")]
+	protected override void OnAddedBuff(Buff.Data buff)
+	{
+	}
+
+	// Token: 0x06001A77 RID: 6775 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A77")]
+	[Address(RVA = "0x2D30794", Offset = "0x2D30794", VA = "0x2D30794", Slot = "26")]
+	protected override void OnRemoveBuff(BuffCode code, float value)
+	{
+	}
+
+	// Token: 0x06001A78 RID: 6776 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A78")]
+	[Address(RVA = "0x2D30A38", Offset = "0x2D30A38", VA = "0x2D30A38", Slot = "53")]
+	public override void AddStatus(BuffCode code)
+	{
+	}
+
+	// Token: 0x06001A79 RID: 6777 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A79")]
+	[Address(RVA = "0x2D30AE4", Offset = "0x2D30AE4", VA = "0x2D30AE4", Slot = "54")]
+	public override void RemoveStatus(BuffCode code)
+	{
+	}
+
+	// Token: 0x06001A7A RID: 6778 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A7A")]
+	[Address(RVA = "0x2D30AF8", Offset = "0x2D30AF8", VA = "0x2D30AF8", Slot = "51")]
+	public override void TakePoisoningDamage(double damage, float time, UnitObject attacker, int maxStacks = 1)
+	{
+	}
+
+	// Token: 0x06001A7B RID: 6779 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A7B")]
+	[Address(RVA = "0x2D30C48", Offset = "0x2D30C48", VA = "0x2D30C48")]
+	private IEnumerator coDotDamageUpdater()
+	{
+		return null;
+	}
+
+	// Token: 0x06001A7C RID: 6780 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A7C")]
+	[Address(RVA = "0x2D2FC70", Offset = "0x2D2FC70", VA = "0x2D2FC70")]
+	protected void Die(bool pingpongEffect, UnitObject attacker, bool isCritical = false, bool isDropExp = true)
+	{
+	}
+
+	// Token: 0x06001A7D RID: 6781 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A7D")]
+	[Address(RVA = "0x2D31148", Offset = "0x2D31148", VA = "0x2D31148", Slot = "68")]
+	protected virtual void onDie()
+	{
+	}
+
+	// Token: 0x06001A7E RID: 6782 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A7E")]
+	[Address(RVA = "0x2D31384", Offset = "0x2D31384", VA = "0x2D31384")]
+	private void dropItem(string itemName)
+	{
+	}
+
+	// Token: 0x06001A7F RID: 6783 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A7F")]
+	[Address(RVA = "0x2D315C0", Offset = "0x2D315C0", VA = "0x2D315C0")]
+	private IEnumerator coDieEffect()
+	{
+		return null;
+	}
+
+	// Token: 0x06001A80 RID: 6784 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A80")]
+	[Address(RVA = "0x2D2FAE4", Offset = "0x2D2FAE4", VA = "0x2D2FAE4")]
+	private void AddInfiniteScore(double damage)
+	{
+	}
+
+	// Token: 0x06001A81 RID: 6785 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A81")]
+	[Address(RVA = "0x2D3166C", Offset = "0x2D3166C", VA = "0x2D3166C", Slot = "52")]
+	protected override void LoseGold(int value)
+	{
+	}
+
+	// Token: 0x06001A82 RID: 6786 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A82")]
+	[Address(RVA = "0x2D30CF4", Offset = "0x2D30CF4", VA = "0x2D30CF4")]
+	protected void DropGold(UnitObject attacker, bool isCritical)
+	{
+	}
+
+	// Token: 0x06001A83 RID: 6787 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A83")]
+	[Address(RVA = "0x2D30EFC", Offset = "0x2D30EFC", VA = "0x2D30EFC")]
+	protected void DropExp()
+	{
+	}
+
+	// Token: 0x06001A84 RID: 6788 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A84")]
+	[Address(RVA = "0x2D31C74", Offset = "0x2D31C74", VA = "0x2D31C74", Slot = "44")]
+	public override void OnDealsDamage(UnitObject target, double damage)
+	{
+	}
+
+	// Token: 0x06001A85 RID: 6789 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6001A85")]
+	[Address(RVA = "0x2D30700", Offset = "0x2D30700", VA = "0x2D30700")]
+	private IEnumerator coScaleChange(float from, float to)
+	{
+		return null;
+	}
+
+	// Token: 0x170002D9 RID: 729
+	// (get) Token: 0x06001A86 RID: 6790 RVA: 0x00009588 File Offset: 0x00007788
+	[Token(Token = "0x170002D9")]
+	public override float AttackRange
+	{
+		[Token(Token = "0x6001A86")]
+		[Address(RVA = "0x2D31CBC", Offset = "0x2D31CBC", VA = "0x2D31CBC", Slot = "57")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170002DA RID: 730
+	// (get) Token: 0x06001A87 RID: 6791 RVA: 0x000095A0 File Offset: 0x000077A0
+	[Token(Token = "0x170002DA")]
+	public override double HP
+	{
+		[Token(Token = "0x6001A87")]
+		[Address(RVA = "0x2D31CDC", Offset = "0x2D31CDC", VA = "0x2D31CDC", Slot = "36")]
+		get
+		{
+			return 0.0;
+		}
+	}
+
+	// Token: 0x170002DB RID: 731
+	// (get) Token: 0x06001A88 RID: 6792 RVA: 0x000095B8 File Offset: 0x000077B8
+	// (set) Token: 0x06001A89 RID: 6793 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x170002DB")]
+	public double MaxHP
+	{
+		[Token(Token = "0x6001A88")]
+		[Address(RVA = "0x2D31D1C", Offset = "0x2D31D1C", VA = "0x2D31D1C")]
+		get
+		{
+			return 0.0;
+		}
+		[Token(Token = "0x6001A89")]
+		[Address(RVA = "0x2D31D3C", Offset = "0x2D31D3C", VA = "0x2D31D3C")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x170002DC RID: 732
+	// (get) Token: 0x06001A8B RID: 6795 RVA: 0x000095D0 File Offset: 0x000077D0
+	// (set) Token: 0x06001A8A RID: 6794 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x170002DC")]
+	protected float Scale
+	{
+		[Token(Token = "0x6001A8B")]
+		[Address(RVA = "0x2D31D5C", Offset = "0x2D31D5C", VA = "0x2D31D5C")]
+		get
+		{
+			return 0f;
+		}
+		[Token(Token = "0x6001A8A")]
+		[Address(RVA = "0x2D2E570", Offset = "0x2D2E570", VA = "0x2D2E570")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x170002DD RID: 733
+	// (get) Token: 0x06001A8C RID: 6796 RVA: 0x000095E8 File Offset: 0x000077E8
+	// (set) Token: 0x06001A8D RID: 6797 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x170002DD")]
+	public override int Level
+	{
+		[Token(Token = "0x6001A8C")]
+		[Address(RVA = "0x2D31D64", Offset = "0x2D31D64", VA = "0x2D31D64", Slot = "15")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6001A8D")]
+		[Address(RVA = "0x2D31E48", Offset = "0x2D31E48", VA = "0x2D31E48", Slot = "16")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x06001A8E RID: 6798 RVA: 0x00009600 File Offset: 0x00007800
+	[Token(Token = "0x6001A8E")]
+	[Address(RVA = "0x2D31E90", Offset = "0x2D31E90", VA = "0x2D31E90")]
+	protected bool IsInvalidTarget(UnitObject target)
+	{
+		return default(bool);
+	}
+
+	// Token: 0x06001A8F RID: 6799 RVA: 0x00009618 File Offset: 0x00007818
+	[Token(Token = "0x6001A8F")]
+	[Address(RVA = "0x2D32078", Offset = "0x2D32078", VA = "0x2D32078")]
+	protected bool IsValidTarget(UnitObject target)
+	{
+		return default(bool);
+	}
+
+	// Token: 0x170002DE RID: 734
+	// (get) Token: 0x06001A90 RID: 6800 RVA: 0x00009630 File Offset: 0x00007830
+	[Token(Token = "0x170002DE")]
+	protected virtual bool IsPauseAI
+	{
+		[Token(Token = "0x6001A90")]
+		[Address(RVA = "0x2D32090", Offset = "0x2D32090", VA = "0x2D32090", Slot = "69")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x06001A91 RID: 6801 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A91")]
+	[Address(RVA = "0x2D32194", Offset = "0x2D32194", VA = "0x2D32194")]
+	public void HoneyTrap(UnitObject owner, float time)
+	{
+	}
+
+	// Token: 0x06001A92 RID: 6802 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A92")]
+	[Address(RVA = "0x2D3221C", Offset = "0x2D3221C", VA = "0x2D3221C")]
+	public void Appoint(UnitObject owner, float time)
+	{
+	}
+
+	// Token: 0x06001A93 RID: 6803 RVA: 0x00009648 File Offset: 0x00007848
+	[Token(Token = "0x6001A93")]
+	[Address(RVA = "0x2D318C8", Offset = "0x2D318C8", VA = "0x2D318C8")]
+	public static int CalcGold(int baseGold, bool isCritical)
+	{
+		return 0;
+	}
+
+	// Token: 0x06001A94 RID: 6804 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A94")]
+	[Address(RVA = "0x2D31B0C", Offset = "0x2D31B0C", VA = "0x2D31B0C")]
+	public static void GiveMoneyToPlayer(int gold)
+	{
+	}
+
+	// Token: 0x06001A95 RID: 6805 RVA: 0x00009660 File Offset: 0x00007860
+	[Token(Token = "0x6001A95")]
+	[Address(RVA = "0x2D32264", Offset = "0x2D32264", VA = "0x2D32264")]
+	public bool IsWithinCastleRange()
+	{
+		return default(bool);
+	}
+
+	// Token: 0x06001A96 RID: 6806 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6001A96")]
+	[Address(RVA = "0x2D32298", Offset = "0x2D32298", VA = "0x2D32298")]
+	public Monster()
+	{
+	}
+
+	// Token: 0x04001670 RID: 5744
+	[Token(Token = "0x4001670")]
+	private const bool OptimizedRenderer = false;
+
+	// Token: 0x04001671 RID: 5745
+	[Token(Token = "0x4001671")]
+	private const float AppointedRightWall = 11.5f;
+
+	// Token: 0x04001672 RID: 5746
+	[Token(Token = "0x4001672")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x0")]
+	private static WaitForSeconds aiWaitForSeconds;
+
+	// Token: 0x04001673 RID: 5747
+	[Token(Token = "0x4001673")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x168")]
+	protected HealthBar hpBar;
+
+	// Token: 0x04001674 RID: 5748
+	[Token(Token = "0x4001674")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x170")]
+	private Vector3 originHPBarPosition;
+
+	// Token: 0x04001675 RID: 5749
+	[Token(Token = "0x4001675")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x17C")]
+	protected XORInt originDamage;
+
+	// Token: 0x04001676 RID: 5750
+	[Token(Token = "0x4001676")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x190")]
+	protected UIBuffStatus buffStatusViewer;
+
+	// Token: 0x04001677 RID: 5751
+	[Token(Token = "0x4001677")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x198")]
+	private Renderer spineRenderer;
+
+	// Token: 0x04001678 RID: 5752
+	[Token(Token = "0x4001678")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1A0")]
+	protected bool isShowing;
+
+	// Token: 0x04001679 RID: 5753
+	[Token(Token = "0x4001679")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1A8")]
+	protected UnitObject owner;
+
+	// Token: 0x0400167A RID: 5754
+	[Token(Token = "0x400167A")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1B0")]
+	[HideInInspector]
+	public bool takenDamageByCriticalExplosion;
+
+	// Token: 0x0400167B RID: 5755
+	[Token(Token = "0x400167B")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1B4")]
+	protected float knockBackValue;
+
+	// Token: 0x0400167C RID: 5756
+	[Token(Token = "0x400167C")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1B8")]
+	private bool hasOnHitAnimationEvent;
+
+	// Token: 0x0400167D RID: 5757
+	[Token(Token = "0x400167D")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1BC")]
+	private Vector2 shadowSize;
+
+	// Token: 0x0400167E RID: 5758
+	[Token(Token = "0x400167E")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1C4")]
+	private Vector2 shadowPosition;
+
+	// Token: 0x0400167F RID: 5759
+	[Token(Token = "0x400167F")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1CC")]
+	protected bool fixedZ;
+
+	// Token: 0x04001680 RID: 5760
+	[Token(Token = "0x4001680")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1D0")]
+	private DotDamage dotDamage;
+
+	// Token: 0x04001681 RID: 5761
+	[Token(Token = "0x4001681")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1D8")]
+	private float _scale;
+
+	// Token: 0x04001682 RID: 5762
+	[Token(Token = "0x4001682")]
+	[Il2CppDummyDll.FieldOffset(Offset = "0x1DC")]
+	private XORInt _level;
+
+	// Token: 0x020004F1 RID: 1265
+	[Token(Token = "0x20004F1")]
+	public struct BonusStatStruct
+	{
+		// Token: 0x04001683 RID: 5763
+		[Token(Token = "0x4001683")]
+		[Il2CppDummyDll.FieldOffset(Offset = "0x0")]
+		public XORDouble hp;
+
+		// Token: 0x04001684 RID: 5764
+		[Token(Token = "0x4001684")]
+		[Il2CppDummyDll.FieldOffset(Offset = "0x28")]
+		public XORDouble exp;
+
+		// Token: 0x04001685 RID: 5765
+		[Token(Token = "0x4001685")]
+		[Il2CppDummyDll.FieldOffset(Offset = "0x50")]
+		public XORDouble gold;
+
+		// Token: 0x04001686 RID: 5766
+		[Token(Token = "0x4001686")]
+		[Il2CppDummyDll.FieldOffset(Offset = "0x78")]
+		public XORDouble damage;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+-------------------------------------
+
+
+
+
+
+
+
+
+using System;
+using Il2CppDummyDll;
+
+// Token: 0x0200010A RID: 266
+[Token(Token = "0x200010A")]
+public enum MonsterCode
+{
+	// Token: 0x04000565 RID: 1381
+	[Token(Token = "0x4000565")]
+	None,
+	// Token: 0x04000566 RID: 1382
+	[Token(Token = "0x4000566")]
+	BossChest = 2,
+	// Token: 0x04000567 RID: 1383
+	[Token(Token = "0x4000567")]
+	GroundDummy,
+	// Token: 0x04000568 RID: 1384
+	[Token(Token = "0x4000568")]
+	FlyingDummy,
+	// Token: 0x04000569 RID: 1385
+	[Token(Token = "0x4000569")]
+	Slime = 10001,
+	// Token: 0x0400056A RID: 1386
+	[Token(Token = "0x400056A")]
+	Zombie,
+	// Token: 0x0400056B RID: 1387
+	[Token(Token = "0x400056B")]
+	Catapult,
+	// Token: 0x0400056C RID: 1388
+	[Token(Token = "0x400056C")]
+	Kobold,
+	// Token: 0x0400056D RID: 1389
+	[Token(Token = "0x400056D")]
+	Cannibal,
+	// Token: 0x0400056E RID: 1390
+	[Token(Token = "0x400056E")]
+	DarkElfM,
+	// Token: 0x0400056F RID: 1391
+	[Token(Token = "0x400056F")]
+	FatBoy,
+	// Token: 0x04000570 RID: 1392
+	[Token(Token = "0x4000570")]
+	Grim,
+	// Token: 0x04000571 RID: 1393
+	[Token(Token = "0x4000571")]
+	HunterM,
+	// Token: 0x04000572 RID: 1394
+	[Token(Token = "0x4000572")]
+	Ork = 10200,
+	// Token: 0x04000573 RID: 1395
+	[Token(Token = "0x4000573")]
+	TNTOrk,
+	// Token: 0x04000574 RID: 1396
+	[Token(Token = "0x4000574")]
+	OrcMage,
+	// Token: 0x04000575 RID: 1397
+	[Token(Token = "0x4000575")]
+	Troll = 10204,
+	// Token: 0x04000576 RID: 1398
+	[Token(Token = "0x4000576")]
+	Harpy = 10100,
+	// Token: 0x04000577 RID: 1399
+	[Token(Token = "0x4000577")]
+	GrimArcher = 10203,
+	// Token: 0x04000578 RID: 1400
+	[Token(Token = "0x4000578")]
+	BetteringRam = 10102,
+	// Token: 0x04000579 RID: 1401
+	[Token(Token = "0x4000579")]
+	Tauren,
+	// Token: 0x0400057A RID: 1402
+	[Token(Token = "0x400057A")]
+	OrcCannon = 10105,
+	// Token: 0x0400057B RID: 1403
+	[Token(Token = "0x400057B")]
+	Zeppelin = 10104,
+	// Token: 0x0400057C RID: 1404
+	[Token(Token = "0x400057C")]
+	SummonedCannibalZombie = 10301,
+	// Token: 0x0400057D RID: 1405
+	[Token(Token = "0x400057D")]
+	SummonedPiggybackZombie,
+	// Token: 0x0400057E RID: 1406
+	[Token(Token = "0x400057E")]
+	SlimeKing = 20001,
+	// Token: 0x0400057F RID: 1407
+	[Token(Token = "0x400057F")]
+	ZombieKing,
+	// Token: 0x04000580 RID: 1408
+	[Token(Token = "0x4000580")]
+	BadBoy,
+	// Token: 0x04000581 RID: 1409
+	[Token(Token = "0x4000581")]
+	SexySlime,
+	// Token: 0x04000582 RID: 1410
+	[Token(Token = "0x4000582")]
+	GreenDragon,
+	// Token: 0x04000583 RID: 1411
+	[Token(Token = "0x4000583")]
+	BlackDragon,
+	// Token: 0x04000584 RID: 1412
+	[Token(Token = "0x4000584")]
+	RedDragon,
+	// Token: 0x04000585 RID: 1413
+	[Token(Token = "0x4000585")]
+	Sin,
+	// Token: 0x04000586 RID: 1414
+	[Token(Token = "0x4000586")]
+	LegendaryDragon,
+	// Token: 0x04000587 RID: 1415
+	[Token(Token = "0x4000587")]
+	BoneDragon,
+	// Token: 0x04000588 RID: 1416
+	[Token(Token = "0x4000588")]
+	SlimeQueen,
+	// Token: 0x04000589 RID: 1417
+	[Token(Token = "0x4000589")]
+	ZombieKing2,
+	// Token: 0x0400058A RID: 1418
+	[Token(Token = "0x400058A")]
+	AncientGolem,
+	// Token: 0x0400058B RID: 1419
+	[Token(Token = "0x400058B")]
+	SpiderQueen,
+	// Token: 0x0400058C RID: 1420
+	[Token(Token = "0x400058C")]
+	DarkWanderer,
+	// Token: 0x0400058D RID: 1421
+	[Token(Token = "0x400058D")]
+	SkeletonBros,
+	// Token: 0x0400058E RID: 1422
+	[Token(Token = "0x400058E")]
+	TripletCannibals,
+	// Token: 0x0400058F RID: 1423
+	[Token(Token = "0x400058F")]
+	FlyingBarrel,
+	// Token: 0x04000590 RID: 1424
+	[Token(Token = "0x4000590")]
+	SiegeTroll,
+	// Token: 0x04000591 RID: 1425
+	[Token(Token = "0x4000591")]
+	OgreKing,
+	// Token: 0x04000592 RID: 1426
+	[Token(Token = "0x4000592")]
+	DarkKnight,
+	// Token: 0x04000593 RID: 1427
+	[Token(Token = "0x4000593")]
+	ClubResistance = 30001,
+	// Token: 0x04000594 RID: 1428
+	[Token(Token = "0x4000594")]
+	TridentResistance,
+	// Token: 0x04000595 RID: 1429
+	[Token(Token = "0x4000595")]
+	SwordResistance,
+	// Token: 0x04000596 RID: 1430
+	[Token(Token = "0x4000596")]
+	BetteringRamResistance,
+	// Token: 0x04000597 RID: 1431
+	[Token(Token = "0x4000597")]
+	HellArcher,
+	// Token: 0x04000598 RID: 1432
+	[Token(Token = "0x4000598")]
+	OrcCatapult,
+	// Token: 0x04000599 RID: 1433
+	[Token(Token = "0x4000599")]
+	CactusGolem = 20100
+}
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using Il2CppDummyDll;
+
+// Token: 0x0200003F RID: 63
+[Token(Token = "0x200003F")]
+public class MosnterList
+{
+	// Token: 0x17000038 RID: 56
+	[Token(Token = "0x17000038")]
+	public UnitObject this[int idx]
+	{
+		[Token(Token = "0x60001D2")]
+		[Address(RVA = "0x2C65DAC", Offset = "0x2C65DAC", VA = "0x2C65DAC")]
+		get
+		{
+			return null;
+		}
+	}
+
+	// Token: 0x17000039 RID: 57
+	// (get) Token: 0x060001D3 RID: 467 RVA: 0x00002D48 File Offset: 0x00000F48
+	[Token(Token = "0x17000039")]
+	public int Count
+	{
+		[Token(Token = "0x60001D3")]
+		[Address(RVA = "0x2C65E3C", Offset = "0x2C65E3C", VA = "0x2C65E3C")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x1700003A RID: 58
+	// (get) Token: 0x060001D4 RID: 468 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x1700003A")]
+	public List<UnitObject> List
+	{
+		[Token(Token = "0x60001D4")]
+		[Address(RVA = "0x2C65E88", Offset = "0x2C65E88", VA = "0x2C65E88")]
+		get
+		{
+			return null;
+		}
+	}
+
+	// Token: 0x060001D5 RID: 469 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60001D5")]
+	[Address(RVA = "0x2C65E90", Offset = "0x2C65E90", VA = "0x2C65E90")]
+	public void Add(UnitObject u)
+	{
+	}
+
+	// Token: 0x060001D6 RID: 470 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60001D6")]
+	[Address(RVA = "0x2C65F90", Offset = "0x2C65F90", VA = "0x2C65F90")]
+	public void Remove(UnitObject u)
+	{
+	}
+
+	// Token: 0x060001D7 RID: 471 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60001D7")]
+	[Address(RVA = "0x2C65FF4", Offset = "0x2C65FF4", VA = "0x2C65FF4")]
+	public void Clear()
+	{
+	}
+
+	// Token: 0x060001D8 RID: 472 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60001D8")]
+	[Address(RVA = "0x2C66068", Offset = "0x2C66068", VA = "0x2C66068")]
+	public void SortSingleItem()
+	{
+	}
+
+	// Token: 0x060001D9 RID: 473 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60001D9")]
+	[Address(RVA = "0x2C661B4", Offset = "0x2C661B4", VA = "0x2C661B4")]
+	public void Sort()
+	{
+	}
+
+	// Token: 0x060001DA RID: 474 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x60001DA")]
+	[Address(RVA = "0x2C6620C", Offset = "0x2C6620C", VA = "0x2C6620C")]
+	public MosnterList()
+	{
+	}
+
+	// Token: 0x04000170 RID: 368
+	[Token(Token = "0x4000170")]
+	[FieldOffset(Offset = "0x10")]
+	private List<UnitObject> list;
+
+	// Token: 0x04000171 RID: 369
+	[Token(Token = "0x4000171")]
+	[FieldOffset(Offset = "0x18")]
+	private MosnterList.MonsterSortCompare compare;
+
+	// Token: 0x02000040 RID: 64
+	[Token(Token = "0x2000040")]
+	public class MonsterSortCompare : IComparer<UnitObject>
+	{
+		// Token: 0x060001DB RID: 475 RVA: 0x00002D60 File Offset: 0x00000F60
+		[Token(Token = "0x60001DB")]
+		[Address(RVA = "0x2C662E4", Offset = "0x2C662E4", VA = "0x2C662E4", Slot = "4")]
+		public int Compare(UnitObject x, UnitObject y)
+		{
+			return 0;
+		}
+
+		// Token: 0x060001DC RID: 476 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x60001DC")]
+		[Address(RVA = "0x2C662DC", Offset = "0x2C662DC", VA = "0x2C662DC")]
+		public MonsterSortCompare()
+		{
+		}
+	}
+}
+
+--------------
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Il2CppDummyDll;
+using UniRx;
+using XOREnc;
+
+// Token: 0x02000220 RID: 544
+[Token(Token = "0x2000220")]
+public static class Player
+{
+	// Token: 0x1400002B RID: 43
+	// (add) Token: 0x06000B32 RID: 2866 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B33 RID: 2867 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1400002B")]
+	public static event Action OnLevelUp
+	{
+		[Token(Token = "0x6000B32")]
+		[Address(RVA = "0x2E5EE60", Offset = "0x2E5EE60", VA = "0x2E5EE60")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B33")]
+		[Address(RVA = "0x2E5EF48", Offset = "0x2E5EF48", VA = "0x2E5EF48")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x1400002C RID: 44
+	// (add) Token: 0x06000B34 RID: 2868 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B35 RID: 2869 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1400002C")]
+	public static event Action OnChangeExp
+	{
+		[Token(Token = "0x6000B34")]
+		[Address(RVA = "0x2E5F030", Offset = "0x2E5F030", VA = "0x2E5F030")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B35")]
+		[Address(RVA = "0x2E5F118", Offset = "0x2E5F118", VA = "0x2E5F118")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x1400002D RID: 45
+	// (add) Token: 0x06000B36 RID: 2870 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B37 RID: 2871 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1400002D")]
+	public static event Action OnChangeOverExp
+	{
+		[Token(Token = "0x6000B36")]
+		[Address(RVA = "0x2E5F200", Offset = "0x2E5F200", VA = "0x2E5F200")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B37")]
+		[Address(RVA = "0x2E5F2E8", Offset = "0x2E5F2E8", VA = "0x2E5F2E8")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x1400002E RID: 46
+	// (add) Token: 0x06000B38 RID: 2872 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B39 RID: 2873 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1400002E")]
+	public static event Action OnChangeSkillPoint
+	{
+		[Token(Token = "0x6000B38")]
+		[Address(RVA = "0x2E5F3D0", Offset = "0x2E5F3D0", VA = "0x2E5F3D0")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B39")]
+		[Address(RVA = "0x2E5F4B8", Offset = "0x2E5F4B8", VA = "0x2E5F4B8")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x1400002F RID: 47
+	// (add) Token: 0x06000B3A RID: 2874 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B3B RID: 2875 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1400002F")]
+	public static event Action<string> OnSkillLevelUp
+	{
+		[Token(Token = "0x6000B3A")]
+		[Address(RVA = "0x2E5F5A0", Offset = "0x2E5F5A0", VA = "0x2E5F5A0")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B3B")]
+		[Address(RVA = "0x2E5F6A0", Offset = "0x2E5F6A0", VA = "0x2E5F6A0")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x14000030 RID: 48
+	// (add) Token: 0x06000B3C RID: 2876 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B3D RID: 2877 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x14000030")]
+	public static event Action<int> OnChangeWave
+	{
+		[Token(Token = "0x6000B3C")]
+		[Address(RVA = "0x2E5F7A0", Offset = "0x2E5F7A0", VA = "0x2E5F7A0")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B3D")]
+		[Address(RVA = "0x2E5F8A0", Offset = "0x2E5F8A0", VA = "0x2E5F8A0")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x14000031 RID: 49
+	// (add) Token: 0x06000B3E RID: 2878 RVA: 0x00002050 File Offset: 0x00000250
+	// (remove) Token: 0x06000B3F RID: 2879 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x14000031")]
+	public static event Action OnChangedPassiveTree
+	{
+		[Token(Token = "0x6000B3E")]
+		[Address(RVA = "0x2E5F9A0", Offset = "0x2E5F9A0", VA = "0x2E5F9A0")]
+		[CompilerGenerated]
+		add
+		{
+		}
+		[Token(Token = "0x6000B3F")]
+		[Address(RVA = "0x2E5FA88", Offset = "0x2E5FA88", VA = "0x2E5FA88")]
+		[CompilerGenerated]
+		remove
+		{
+		}
+	}
+
+	// Token: 0x06000B40 RID: 2880 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B40")]
+	[Address(RVA = "0x2E5FB70", Offset = "0x2E5FB70", VA = "0x2E5FB70")]
+	public static void Init()
+	{
+	}
+
+	// Token: 0x17000195 RID: 405
+	// (get) Token: 0x06000B42 RID: 2882 RVA: 0x00005E50 File Offset: 0x00004050
+	// (set) Token: 0x06000B41 RID: 2881 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000195")]
+	public static int Level
+	{
+		[Token(Token = "0x6000B42")]
+		[Address(RVA = "0x2E61340", Offset = "0x2E61340", VA = "0x2E61340")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B41")]
+		[Address(RVA = "0x2E612C8", Offset = "0x2E612C8", VA = "0x2E612C8")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x06000B43 RID: 2883 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B43")]
+	[Address(RVA = "0x2E613A8", Offset = "0x2E613A8", VA = "0x2E613A8")]
+	public static void RefreshCache()
+	{
+	}
+
+	// Token: 0x06000B44 RID: 2884 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B44")]
+	[Address(RVA = "0x2E61E54", Offset = "0x2E61E54", VA = "0x2E61E54")]
+	public static void AddExp(double exp)
+	{
+	}
+
+	// Token: 0x06000B45 RID: 2885 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B45")]
+	[Address(RVA = "0x2E623C4", Offset = "0x2E623C4", VA = "0x2E623C4")]
+	public static void AddOverExp(float exp)
+	{
+	}
+
+	// Token: 0x17000196 RID: 406
+	// (get) Token: 0x06000B47 RID: 2887 RVA: 0x00005E68 File Offset: 0x00004068
+	// (set) Token: 0x06000B46 RID: 2886 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000196")]
+	public static int Exp
+	{
+		[Token(Token = "0x6000B47")]
+		[Address(RVA = "0x2E6211C", Offset = "0x2E6211C", VA = "0x2E6211C")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B46")]
+		[Address(RVA = "0x2E62184", Offset = "0x2E62184", VA = "0x2E62184")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x17000197 RID: 407
+	// (get) Token: 0x06000B48 RID: 2888 RVA: 0x00005E80 File Offset: 0x00004080
+	[Token(Token = "0x17000197")]
+	public static double NextExp
+	{
+		[Token(Token = "0x6000B48")]
+		[Address(RVA = "0x2E61FB8", Offset = "0x2E61FB8", VA = "0x2E61FB8")]
+		get
+		{
+			return 0.0;
+		}
+	}
+
+	// Token: 0x17000198 RID: 408
+	// (get) Token: 0x06000B4A RID: 2890 RVA: 0x00005E98 File Offset: 0x00004098
+	// (set) Token: 0x06000B49 RID: 2889 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000198")]
+	public static long OverExp
+	{
+		[Token(Token = "0x6000B4A")]
+		[Address(RVA = "0x2E62470", Offset = "0x2E62470", VA = "0x2E62470")]
+		get
+		{
+			return 0L;
+		}
+		[Token(Token = "0x6000B49")]
+		[Address(RVA = "0x2E624D8", Offset = "0x2E624D8", VA = "0x2E624D8")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x06000B4B RID: 2891 RVA: 0x00005EB0 File Offset: 0x000040B0
+	[Token(Token = "0x6000B4B")]
+	[Address(RVA = "0x2E626D8", Offset = "0x2E626D8", VA = "0x2E626D8")]
+	public static int SkillLevelUp(string name)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B4C RID: 2892 RVA: 0x00005EC8 File Offset: 0x000040C8
+	[Token(Token = "0x6000B4C")]
+	[Address(RVA = "0x2E62C98", Offset = "0x2E62C98", VA = "0x2E62C98")]
+	public static int ExpSkillLevelUp(string name)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B4D RID: 2893 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B4D")]
+	[Address(RVA = "0x2E63034", Offset = "0x2E63034", VA = "0x2E63034")]
+	public static void ResetExpSkill()
+	{
+	}
+
+	// Token: 0x17000199 RID: 409
+	// (get) Token: 0x06000B4F RID: 2895 RVA: 0x00005EE0 File Offset: 0x000040E0
+	// (set) Token: 0x06000B4E RID: 2894 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x17000199")]
+	public static int SkillPoint
+	{
+		[Token(Token = "0x6000B4F")]
+		[Address(RVA = "0x2E62594", Offset = "0x2E62594", VA = "0x2E62594")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B4E")]
+		[Address(RVA = "0x2E625FC", Offset = "0x2E625FC", VA = "0x2E625FC")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x1700019A RID: 410
+	// (get) Token: 0x06000B51 RID: 2897 RVA: 0x00005EF8 File Offset: 0x000040F8
+	// (set) Token: 0x06000B50 RID: 2896 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700019A")]
+	public static int Wave
+	{
+		[Token(Token = "0x6000B51")]
+		[Address(RVA = "0x2E5C094", Offset = "0x2E5C094", VA = "0x2E5C094")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B50")]
+		[Address(RVA = "0x2E631BC", Offset = "0x2E631BC", VA = "0x2E631BC")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x06000B52 RID: 2898 RVA: 0x00005F10 File Offset: 0x00004110
+	[Token(Token = "0x6000B52")]
+	[Address(RVA = "0x2E63338", Offset = "0x2E63338", VA = "0x2E63338")]
+	private static bool checkCheatWave()
+	{
+		return default(bool);
+	}
+
+	// Token: 0x06000B53 RID: 2899 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B53")]
+	[Address(RVA = "0x2E63538", Offset = "0x2E63538", VA = "0x2E63538")]
+	public static void UpdateMaxCrystal()
+	{
+	}
+
+	// Token: 0x1700019B RID: 411
+	// (get) Token: 0x06000B54 RID: 2900 RVA: 0x00005F28 File Offset: 0x00004128
+	[Token(Token = "0x1700019B")]
+	public static int MaxCrystal
+	{
+		[Token(Token = "0x6000B54")]
+		[Address(RVA = "0x2E637B8", Offset = "0x2E637B8", VA = "0x2E637B8")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x1700019C RID: 412
+	// (get) Token: 0x06000B56 RID: 2902 RVA: 0x00005F40 File Offset: 0x00004140
+	// (set) Token: 0x06000B55 RID: 2901 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700019C")]
+	public static int Crystal
+	{
+		[Token(Token = "0x6000B56")]
+		[Address(RVA = "0x2E63D1C", Offset = "0x2E63D1C", VA = "0x2E63D1C")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B55")]
+		[Address(RVA = "0x2E63870", Offset = "0x2E63870", VA = "0x2E63870")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x1700019D RID: 413
+	// (get) Token: 0x06000B58 RID: 2904 RVA: 0x00005F58 File Offset: 0x00004158
+	// (set) Token: 0x06000B57 RID: 2903 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700019D")]
+	public static int ExtraCrystal
+	{
+		[Token(Token = "0x6000B58")]
+		[Address(RVA = "0x2E63E30", Offset = "0x2E63E30", VA = "0x2E63E30")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B57")]
+		[Address(RVA = "0x2E63D88", Offset = "0x2E63D88", VA = "0x2E63D88")]
+		private set
+		{
+		}
+	}
+
+	// Token: 0x06000B59 RID: 2905 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B59")]
+	[Address(RVA = "0x2E63914", Offset = "0x2E63914", VA = "0x2E63914")]
+	private static void checkCheat()
+	{
+	}
+
+	// Token: 0x06000B5A RID: 2906 RVA: 0x00005F70 File Offset: 0x00004170
+	[Token(Token = "0x6000B5A")]
+	[Address(RVA = "0x2E63EA8", Offset = "0x2E63EA8", VA = "0x2E63EA8")]
+	public static int AddCrystal(int count)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B5B RID: 2907 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B5B")]
+	[Address(RVA = "0x2E63F6C", Offset = "0x2E63F6C", VA = "0x2E63F6C")]
+	public static void AddExtraCrystal(int count)
+	{
+	}
+
+	// Token: 0x1700019E RID: 414
+	// (get) Token: 0x06000B5C RID: 2908 RVA: 0x00005F88 File Offset: 0x00004188
+	[Token(Token = "0x1700019E")]
+	public static int TotalCrystal
+	{
+		[Token(Token = "0x6000B5C")]
+		[Address(RVA = "0x2E54C1C", Offset = "0x2E54C1C", VA = "0x2E54C1C")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x06000B5D RID: 2909 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B5D")]
+	[Address(RVA = "0x2E5408C", Offset = "0x2E5408C", VA = "0x2E5408C")]
+	public static void SpendCrystal(int count)
+	{
+	}
+
+	// Token: 0x1700019F RID: 415
+	// (get) Token: 0x06000B5F RID: 2911 RVA: 0x00005FA0 File Offset: 0x000041A0
+	// (set) Token: 0x06000B5E RID: 2910 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x1700019F")]
+	public static long InfiniteScore
+	{
+		[Token(Token = "0x6000B5F")]
+		[Address(RVA = "0x2E641C0", Offset = "0x2E641C0", VA = "0x2E641C0")]
+		get
+		{
+			return 0L;
+		}
+		[Token(Token = "0x6000B5E")]
+		[Address(RVA = "0x2E63FD8", Offset = "0x2E63FD8", VA = "0x2E63FD8")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x170001A0 RID: 416
+	// (get) Token: 0x06000B60 RID: 2912 RVA: 0x00005FB8 File Offset: 0x000041B8
+	[Token(Token = "0x170001A0")]
+	public static long InfiniteScore2
+	{
+		[Token(Token = "0x6000B60")]
+		[Address(RVA = "0x2E6423C", Offset = "0x2E6423C", VA = "0x2E6423C")]
+		get
+		{
+			return 0L;
+		}
+	}
+
+	// Token: 0x06000B61 RID: 2913 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B61")]
+	[Address(RVA = "0x2E642A4", Offset = "0x2E642A4", VA = "0x2E642A4")]
+	public static void AddInfiniteScore(long score)
+	{
+	}
+
+	// Token: 0x06000B62 RID: 2914 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B62")]
+	[Address(RVA = "0x2E64308", Offset = "0x2E64308", VA = "0x2E64308")]
+	public static void AddBonusValue(BuffCode code, float value, bool overwrite = false)
+	{
+	}
+
+	// Token: 0x06000B63 RID: 2915 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B63")]
+	[Address(RVA = "0x2E644B0", Offset = "0x2E644B0", VA = "0x2E644B0")]
+	public static void RemoveBonusValue(BuffCode code)
+	{
+	}
+
+	// Token: 0x06000B64 RID: 2916 RVA: 0x00005FD0 File Offset: 0x000041D0
+	[Token(Token = "0x6000B64")]
+	[Address(RVA = "0x2E61C98", Offset = "0x2E61C98", VA = "0x2E61C98")]
+	public static float GetBonusValue(BuffCode code)
+	{
+		return 0f;
+	}
+
+	// Token: 0x06000B65 RID: 2917 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B65")]
+	[Address(RVA = "0x2E64590", Offset = "0x2E64590", VA = "0x2E64590")]
+	public static void IncreaseBonusGold(float value)
+	{
+	}
+
+	// Token: 0x06000B66 RID: 2918 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B66")]
+	[Address(RVA = "0x2E64648", Offset = "0x2E64648", VA = "0x2E64648")]
+	public static void DecreaseBonusGold(float value)
+	{
+	}
+
+	// Token: 0x06000B67 RID: 2919 RVA: 0x00005FE8 File Offset: 0x000041E8
+	[Token(Token = "0x6000B67")]
+	[Address(RVA = "0x2E64700", Offset = "0x2E64700", VA = "0x2E64700")]
+	public static float GetExpSkillValue(string skillName)
+	{
+		return 0f;
+	}
+
+	// Token: 0x06000B68 RID: 2920 RVA: 0x00006000 File Offset: 0x00004200
+	[Token(Token = "0x6000B68")]
+	[Address(RVA = "0x2E647C0", Offset = "0x2E647C0", VA = "0x2E647C0")]
+	public static float GetSkillValue(string skillName)
+	{
+		return 0f;
+	}
+
+	// Token: 0x06000B69 RID: 2921 RVA: 0x00006018 File Offset: 0x00004218
+	[Token(Token = "0x6000B69")]
+	[Address(RVA = "0x2E628BC", Offset = "0x2E628BC", VA = "0x2E628BC")]
+	public static int GetSkillLevel(string skillName)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B6A RID: 2922 RVA: 0x00006030 File Offset: 0x00004230
+	[Token(Token = "0x6000B6A")]
+	[Address(RVA = "0x2E64874", Offset = "0x2E64874", VA = "0x2E64874")]
+	public static int GetSkillLevel(int skillCode)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B6B RID: 2923 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B6B")]
+	[Address(RVA = "0x2E64914", Offset = "0x2E64914", VA = "0x2E64914")]
+	public static void ClearSkillLevelByAllItems()
+	{
+	}
+
+	// Token: 0x06000B6C RID: 2924 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B6C")]
+	[Address(RVA = "0x2E64B7C", Offset = "0x2E64B7C", VA = "0x2E64B7C")]
+	public static void IncreaseSkillLevelByEpic(int skillCode)
+	{
+	}
+
+	// Token: 0x06000B6D RID: 2925 RVA: 0x00006048 File Offset: 0x00004248
+	[Token(Token = "0x6000B6D")]
+	[Address(RVA = "0x2E64CE0", Offset = "0x2E64CE0", VA = "0x2E64CE0")]
+	public static int GetSkillLevelFromEpic(int skillCode)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B6E RID: 2926 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B6E")]
+	[Address(RVA = "0x2E64D94", Offset = "0x2E64D94", VA = "0x2E64D94")]
+	public static void IncreaseSkillLevelByEnchant(int skillCode)
+	{
+	}
+
+	// Token: 0x06000B6F RID: 2927 RVA: 0x00006060 File Offset: 0x00004260
+	[Token(Token = "0x6000B6F")]
+	[Address(RVA = "0x2E64EF8", Offset = "0x2E64EF8", VA = "0x2E64EF8")]
+	public static int GetSkillLevelFromEnchant(int skillCode)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B70 RID: 2928 RVA: 0x00006078 File Offset: 0x00004278
+	[Token(Token = "0x6000B70")]
+	[Address(RVA = "0x2E64FB4", Offset = "0x2E64FB4", VA = "0x2E64FB4")]
+	public static int GetAllSkillLevel(string skillName)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B71 RID: 2929 RVA: 0x00006090 File Offset: 0x00004290
+	[Token(Token = "0x6000B71")]
+	[Address(RVA = "0x2E6505C", Offset = "0x2E6505C", VA = "0x2E6505C")]
+	public static float GetAllSkillValue(string skillName)
+	{
+		return 0f;
+	}
+
+	// Token: 0x06000B72 RID: 2930 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B72")]
+	[Address(RVA = "0x2E62938", Offset = "0x2E62938", VA = "0x2E62938")]
+	private static void checkCheatSkillLevel(int skillCode)
+	{
+	}
+
+	// Token: 0x06000B73 RID: 2931 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B73")]
+	[Address(RVA = "0x2E65110", Offset = "0x2E65110", VA = "0x2E65110")]
+	public static void TrySetGlobalRuneBonus(ItemSlotPro item, Option option)
+	{
+	}
+
+	// Token: 0x06000B74 RID: 2932 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B74")]
+	[Address(RVA = "0x2E651F4", Offset = "0x2E651F4", VA = "0x2E651F4")]
+	public static void SetGlobalRuneBonus(Option option, float value)
+	{
+	}
+
+	// Token: 0x06000B75 RID: 2933 RVA: 0x000060A8 File Offset: 0x000042A8
+	[Token(Token = "0x6000B75")]
+	[Address(RVA = "0x2E61D3C", Offset = "0x2E61D3C", VA = "0x2E61D3C")]
+	public static float GetGlobalRuneBonus(Option option)
+	{
+		return 0f;
+	}
+
+	// Token: 0x06000B76 RID: 2934 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B76")]
+	[Address(RVA = "0x2E6532C", Offset = "0x2E6532C", VA = "0x2E6532C")]
+	public static void ClearGlobalRuneBonus()
+	{
+	}
+
+	// Token: 0x06000B77 RID: 2935 RVA: 0x000060C0 File Offset: 0x000042C0
+	[Token(Token = "0x6000B77")]
+	[Address(RVA = "0x2E62E84", Offset = "0x2E62E84", VA = "0x2E62E84")]
+	public static long GetRequiredExpSkillExp(string skillName)
+	{
+		return 0L;
+	}
+
+	// Token: 0x06000B78 RID: 2936 RVA: 0x000060D8 File Offset: 0x000042D8
+	[Token(Token = "0x6000B78")]
+	[Address(RVA = "0x2E653A8", Offset = "0x2E653A8", VA = "0x2E653A8")]
+	public static int GetMonsterKills(int monsterCode)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B79 RID: 2937 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B79")]
+	[Address(RVA = "0x2E65420", Offset = "0x2E65420", VA = "0x2E65420")]
+	public static void AddMonsterKill(int monsterCode)
+	{
+	}
+
+	// Token: 0x06000B7A RID: 2938 RVA: 0x000060F0 File Offset: 0x000042F0
+	[Token(Token = "0x6000B7A")]
+	[Address(RVA = "0x2E65498", Offset = "0x2E65498", VA = "0x2E65498")]
+	public static Weak GetMonsterWeakPoint(int monsterCode)
+	{
+		return Weak.None;
+	}
+
+	// Token: 0x06000B7B RID: 2939 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B7B")]
+	[Address(RVA = "0x2E655F4", Offset = "0x2E655F4", VA = "0x2E655F4")]
+	public static void SetMonsterWeakPoint(int monsterCode, Weak weak)
+	{
+	}
+
+	// Token: 0x06000B7C RID: 2940 RVA: 0x00006108 File Offset: 0x00004308
+	[Token(Token = "0x6000B7C")]
+	[Address(RVA = "0x2E65820", Offset = "0x2E65820", VA = "0x2E65820")]
+	public static int GetDungeonKills(int code)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B7D RID: 2941 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B7D")]
+	[Address(RVA = "0x2E65898", Offset = "0x2E65898", VA = "0x2E65898")]
+	public static void SetDungeonKills(int code, int kills)
+	{
+	}
+
+	// Token: 0x06000B7E RID: 2942 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B7E")]
+	[Address(RVA = "0x2E65918", Offset = "0x2E65918", VA = "0x2E65918")]
+	public static void SetPassiveTreeDeck(string deckName)
+	{
+	}
+
+	// Token: 0x06000B7F RID: 2943 RVA: 0x00002142 File Offset: 0x00000342
+	[Token(Token = "0x6000B7F")]
+	[Address(RVA = "0x2E65BA4", Offset = "0x2E65BA4", VA = "0x2E65BA4")]
+	public static ItemSlot GetWorldObjectData(int key)
+	{
+		return null;
+	}
+
+	// Token: 0x06000B80 RID: 2944 RVA: 0x00006120 File Offset: 0x00004320
+	[Token(Token = "0x6000B80")]
+	[Address(RVA = "0x2E65C74", Offset = "0x2E65C74", VA = "0x2E65C74")]
+	public static int GetWorldObjectLevel(int key)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B81 RID: 2945 RVA: 0x00006138 File Offset: 0x00004338
+	[Token(Token = "0x6000B81")]
+	[Address(RVA = "0x2E65D30", Offset = "0x2E65D30", VA = "0x2E65D30")]
+	public static long GetColonyGold(int key)
+	{
+		return 0L;
+	}
+
+	// Token: 0x06000B82 RID: 2946 RVA: 0x00006150 File Offset: 0x00004350
+	[Token(Token = "0x6000B82")]
+	[Address(RVA = "0x2E66190", Offset = "0x2E66190", VA = "0x2E66190")]
+	public static float GetColonyTime(int key)
+	{
+		return 0f;
+	}
+
+	// Token: 0x06000B83 RID: 2947 RVA: 0x00006168 File Offset: 0x00004368
+	[Token(Token = "0x6000B83")]
+	[Address(RVA = "0x2E66344", Offset = "0x2E66344", VA = "0x2E66344")]
+	public static long GetAllColoniesGold()
+	{
+		return 0L;
+	}
+
+	// Token: 0x06000B84 RID: 2948 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B84")]
+	[Address(RVA = "0x2E667B0", Offset = "0x2E667B0", VA = "0x2E667B0")]
+	public static void ClearColonyCache()
+	{
+	}
+
+	// Token: 0x06000B85 RID: 2949 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B85")]
+	[Address(RVA = "0x2E60B8C", Offset = "0x2E60B8C", VA = "0x2E60B8C")]
+	public static void RecacheHellColony()
+	{
+	}
+
+	// Token: 0x170001A1 RID: 417
+	// (get) Token: 0x06000B86 RID: 2950 RVA: 0x00006180 File Offset: 0x00004380
+	[Token(Token = "0x170001A1")]
+	public static float HellArcherDamage
+	{
+		[Token(Token = "0x6000B86")]
+		[Address(RVA = "0x2E66834", Offset = "0x2E66834", VA = "0x2E66834")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A2 RID: 418
+	// (get) Token: 0x06000B87 RID: 2951 RVA: 0x00006198 File Offset: 0x00004398
+	[Token(Token = "0x170001A2")]
+	public static float HellArcherSpeed
+	{
+		[Token(Token = "0x6000B87")]
+		[Address(RVA = "0x2E668B4", Offset = "0x2E668B4", VA = "0x2E668B4")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A3 RID: 419
+	// (get) Token: 0x06000B88 RID: 2952 RVA: 0x000061B0 File Offset: 0x000043B0
+	[Token(Token = "0x170001A3")]
+	public static float HellArcherCriticalDamage
+	{
+		[Token(Token = "0x6000B88")]
+		[Address(RVA = "0x2E66934", Offset = "0x2E66934", VA = "0x2E66934")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A4 RID: 420
+	// (get) Token: 0x06000B89 RID: 2953 RVA: 0x000061C8 File Offset: 0x000043C8
+	[Token(Token = "0x170001A4")]
+	public static float OrcBStoneChance
+	{
+		[Token(Token = "0x6000B89")]
+		[Address(RVA = "0x2E669B0", Offset = "0x2E669B0", VA = "0x2E669B0")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A5 RID: 421
+	// (get) Token: 0x06000B8A RID: 2954 RVA: 0x000061E0 File Offset: 0x000043E0
+	[Token(Token = "0x170001A5")]
+	public static float OrcAStoneChance
+	{
+		[Token(Token = "0x6000B8A")]
+		[Address(RVA = "0x2E66A3C", Offset = "0x2E66A3C", VA = "0x2E66A3C")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A6 RID: 422
+	// (get) Token: 0x06000B8B RID: 2955 RVA: 0x000061F8 File Offset: 0x000043F8
+	[Token(Token = "0x170001A6")]
+	public static float OrcCrystalChance
+	{
+		[Token(Token = "0x6000B8B")]
+		[Address(RVA = "0x2E66AC8", Offset = "0x2E66AC8", VA = "0x2E66AC8")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x06000B8C RID: 2956 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B8C")]
+	[Address(RVA = "0x2E66B54", Offset = "0x2E66B54", VA = "0x2E66B54")]
+	public static void SetWorldObjectLevel(int key, int value)
+	{
+	}
+
+	// Token: 0x06000B8D RID: 2957 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B8D")]
+	[Address(RVA = "0x2E66CEC", Offset = "0x2E66CEC", VA = "0x2E66CEC")]
+	public static void SetInfiniteWorldObjectLevel(int key, int value)
+	{
+	}
+
+	// Token: 0x06000B8E RID: 2958 RVA: 0x00006210 File Offset: 0x00004410
+	[Token(Token = "0x6000B8E")]
+	[Address(RVA = "0x2E66090", Offset = "0x2E66090", VA = "0x2E66090")]
+	public static int GetInfiniteWorldMapObjectlevel(int key)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B8F RID: 2959 RVA: 0x00006228 File Offset: 0x00004428
+	[Token(Token = "0x6000B8F")]
+	[Address(RVA = "0x2E66DBC", Offset = "0x2E66DBC", VA = "0x2E66DBC")]
+	public static int GetCostumeLevel(ArcherCostumes.Data data)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B90 RID: 2960 RVA: 0x00006240 File Offset: 0x00004440
+	[Token(Token = "0x6000B90")]
+	[Address(RVA = "0x2E66E5C", Offset = "0x2E66E5C", VA = "0x2E66E5C")]
+	public static int GetCostumeLevel(int code)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000B91 RID: 2961 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B91")]
+	[Address(RVA = "0x2E66ED4", Offset = "0x2E66ED4", VA = "0x2E66ED4")]
+	public static void SetCostumeLevel(int code, int level)
+	{
+	}
+
+	// Token: 0x06000B92 RID: 2962 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B92")]
+	[Address(RVA = "0x2E66F54", Offset = "0x2E66F54", VA = "0x2E66F54")]
+	public static void CostumeLevelUP(int code)
+	{
+	}
+
+	// Token: 0x06000B93 RID: 2963 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B93")]
+	[Address(RVA = "0x2E66FCC", Offset = "0x2E66FCC", VA = "0x2E66FCC")]
+	public static void SetHotTimeBonusGold(float value, float duration)
+	{
+	}
+
+	// Token: 0x06000B94 RID: 2964 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000B94")]
+	[Address(RVA = "0x2E670F4", Offset = "0x2E670F4", VA = "0x2E670F4")]
+	private static void Update()
+	{
+	}
+
+	// Token: 0x170001A7 RID: 423
+	// (get) Token: 0x06000B95 RID: 2965 RVA: 0x00006258 File Offset: 0x00004458
+	[Token(Token = "0x170001A7")]
+	public static float BonusGold
+	{
+		[Token(Token = "0x6000B95")]
+		[Address(RVA = "0x2E67344", Offset = "0x2E67344", VA = "0x2E67344")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A8 RID: 424
+	// (get) Token: 0x06000B96 RID: 2966 RVA: 0x00006270 File Offset: 0x00004470
+	[Token(Token = "0x170001A8")]
+	public static float CriticalBonusGold
+	{
+		[Token(Token = "0x6000B96")]
+		[Address(RVA = "0x2E67568", Offset = "0x2E67568", VA = "0x2E67568")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001A9 RID: 425
+	// (get) Token: 0x06000B97 RID: 2967 RVA: 0x00006288 File Offset: 0x00004488
+	[Token(Token = "0x170001A9")]
+	public static int BonusIntGold
+	{
+		[Token(Token = "0x6000B97")]
+		[Address(RVA = "0x2E675E8", Offset = "0x2E675E8", VA = "0x2E675E8")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x170001AA RID: 426
+	// (get) Token: 0x06000B98 RID: 2968 RVA: 0x000062A0 File Offset: 0x000044A0
+	[Token(Token = "0x170001AA")]
+	public static float BonusExp
+	{
+		[Token(Token = "0x6000B98")]
+		[Address(RVA = "0x2E62020", Offset = "0x2E62020", VA = "0x2E62020")]
+		get
+		{
+			return 0f;
+		}
+	}
+
+	// Token: 0x170001AB RID: 427
+	// (get) Token: 0x06000B99 RID: 2969 RVA: 0x000062B8 File Offset: 0x000044B8
+	// (set) Token: 0x06000B9A RID: 2970 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x170001AB")]
+	public static float ArcherBonusDamage
+	{
+		[Token(Token = "0x6000B99")]
+		[Address(RVA = "0x2E67664", Offset = "0x2E67664", VA = "0x2E67664")]
+		get
+		{
+			return 0f;
+		}
+		[Token(Token = "0x6000B9A")]
+		[Address(RVA = "0x2E676E4", Offset = "0x2E676E4", VA = "0x2E676E4")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x170001AC RID: 428
+	// (get) Token: 0x06000B9B RID: 2971 RVA: 0x000062D0 File Offset: 0x000044D0
+	[Token(Token = "0x170001AC")]
+	public static bool HasGuild
+	{
+		[Token(Token = "0x6000B9B")]
+		[Address(RVA = "0x2E67774", Offset = "0x2E67774", VA = "0x2E67774")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x170001AD RID: 429
+	// (get) Token: 0x06000B9D RID: 2973 RVA: 0x000062E8 File Offset: 0x000044E8
+	// (set) Token: 0x06000B9C RID: 2972 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x170001AD")]
+	public static int Guild
+	{
+		[Token(Token = "0x6000B9D")]
+		[Address(RVA = "0x2E61DEC", Offset = "0x2E61DEC", VA = "0x2E61DEC")]
+		get
+		{
+			return 0;
+		}
+		[Token(Token = "0x6000B9C")]
+		[Address(RVA = "0x2E677D0", Offset = "0x2E677D0", VA = "0x2E677D0")]
+		set
+		{
+		}
+	}
+
+	// Token: 0x170001AE RID: 430
+	// (get) Token: 0x06000B9E RID: 2974 RVA: 0x00006300 File Offset: 0x00004500
+	[Token(Token = "0x170001AE")]
+	public static int TotalSkillLevel
+	{
+		[Token(Token = "0x6000B9E")]
+		[Address(RVA = "0x2E67848", Offset = "0x2E67848", VA = "0x2E67848")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x170001AF RID: 431
+	// (get) Token: 0x06000B9F RID: 2975 RVA: 0x00006318 File Offset: 0x00004518
+	[Token(Token = "0x170001AF")]
+	public static int TotalExpSkillLevel
+	{
+		[Token(Token = "0x6000B9F")]
+		[Address(RVA = "0x2E67ACC", Offset = "0x2E67ACC", VA = "0x2E67ACC")]
+		get
+		{
+			return 0;
+		}
+	}
+
+	// Token: 0x170001B0 RID: 432
+	// (get) Token: 0x06000BA0 RID: 2976 RVA: 0x00006330 File Offset: 0x00004530
+	[Token(Token = "0x170001B0")]
+	public static bool IsCheatedSkillPoint
+	{
+		[Token(Token = "0x6000BA0")]
+		[Address(RVA = "0x2E678F0", Offset = "0x2E678F0", VA = "0x2E678F0")]
+		get
+		{
+			return default(bool);
+		}
+	}
+
+	// Token: 0x06000BA1 RID: 2977 RVA: 0x00006348 File Offset: 0x00004548
+	[Token(Token = "0x6000BA1")]
+	[Address(RVA = "0x2E67BB4", Offset = "0x2E67BB4", VA = "0x2E67BB4")]
+	public static long CalcGoldPerWave(long wave)
+	{
+		return 0L;
+	}
+
+	// Token: 0x06000BA2 RID: 2978 RVA: 0x00006360 File Offset: 0x00004560
+	[Token(Token = "0x6000BA2")]
+	[Address(RVA = "0x2E67C90", Offset = "0x2E67C90", VA = "0x2E67C90")]
+	public static long CalcGoldPerWave()
+	{
+		return 0L;
+	}
+
+	// Token: 0x06000BA3 RID: 2979 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BA3")]
+	[Address(RVA = "0x2E67CE8", Offset = "0x2E67CE8", VA = "0x2E67CE8")]
+	public static void ActivateNode(int id)
+	{
+	}
+
+	// Token: 0x06000BA4 RID: 2980 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BA4")]
+	[Address(RVA = "0x2E67D8C", Offset = "0x2E67D8C", VA = "0x2E67D8C")]
+	public static void InactivateNode(int id)
+	{
+	}
+
+	// Token: 0x06000BA5 RID: 2981 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BA5")]
+	[Address(RVA = "0x2E67E30", Offset = "0x2E67E30", VA = "0x2E67E30")]
+	public static void ResetCurrentPassiveTree()
+	{
+	}
+
+	// Token: 0x06000BA6 RID: 2982 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BA6")]
+	[Address(RVA = "0x2E67F00", Offset = "0x2E67F00", VA = "0x2E67F00")]
+	public static void Load()
+	{
+	}
+
+	// Token: 0x06000BA7 RID: 2983 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BA7")]
+	[Address(RVA = "0x2E680BC", Offset = "0x2E680BC", VA = "0x2E680BC")]
+	public static void Save()
+	{
+	}
+
+	// Token: 0x06000BA9 RID: 2985 RVA: 0x00006378 File Offset: 0x00004578
+	[Token(Token = "0x6000BA9")]
+	[Address(RVA = "0x2E655C8", Offset = "0x2E655C8", VA = "0x2E655C8")]
+	[CompilerGenerated]
+	internal static int <GetMonsterWeakPoint>g__GetValue|119_0(int pos, ref Player.<>c__DisplayClass119_0 A_1)
+	{
+		return 0;
+	}
+
+	// Token: 0x06000BAA RID: 2986 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BAA")]
+	[Address(RVA = "0x2E657E4", Offset = "0x2E657E4", VA = "0x2E657E4")]
+	[CompilerGenerated]
+	internal static void <SetMonsterWeakPoint>g__SetValue|120_0(int pos, int value, ref Player.<>c__DisplayClass120_0 A_2)
+	{
+	}
+
+	// Token: 0x04000AE3 RID: 2787
+	[Token(Token = "0x4000AE3")]
+	[FieldOffset(Offset = "0x0")]
+	private static string Key;
+
+	// Token: 0x04000AE4 RID: 2788
+	[Token(Token = "0x4000AE4")]
+	[FieldOffset(Offset = "0x8")]
+	private static PlayerData _data;
+
+	// Token: 0x04000AE5 RID: 2789
+	[Token(Token = "0x4000AE5")]
+	[FieldOffset(Offset = "0x10")]
+	public static XORInt MaxLevel;
+
+	// Token: 0x04000AED RID: 2797
+	[Token(Token = "0x4000AED")]
+	[FieldOffset(Offset = "0x60")]
+	private static Dictionary<BuffCode, float> _globalBuff;
+
+	// Token: 0x04000AEE RID: 2798
+	[Token(Token = "0x4000AEE")]
+	[FieldOffset(Offset = "0x68")]
+	private static Dictionary<int, ObscuredInt> _skillLevelsByEpic;
+
+	// Token: 0x04000AEF RID: 2799
+	[Token(Token = "0x4000AEF")]
+	[FieldOffset(Offset = "0x70")]
+	private static Dictionary<int, ObscuredInt> _skillLevelsByEnchant;
+
+	// Token: 0x04000AF0 RID: 2800
+	[Token(Token = "0x4000AF0")]
+	[FieldOffset(Offset = "0x78")]
+	private static Dictionary<Option, float> _globalRuneBonus;
+
+	// Token: 0x04000AF1 RID: 2801
+	[Token(Token = "0x4000AF1")]
+	[FieldOffset(Offset = "0x80")]
+	private static XORInt _cachedBonusIntGold;
+
+	// Token: 0x04000AF2 RID: 2802
+	[Token(Token = "0x4000AF2")]
+	[FieldOffset(Offset = "0x98")]
+	private static UIWindow uiCloudSave;
+
+	// Token: 0x04000AF3 RID: 2803
+	[Token(Token = "0x4000AF3")]
+	[FieldOffset(Offset = "0xA0")]
+	private static UIWindow uiNewVersion;
+
+	// Token: 0x04000AF4 RID: 2804
+	[Token(Token = "0x4000AF4")]
+	[FieldOffset(Offset = "0xA8")]
+	private static UIWindow uiLoadComplete;
+
+	// Token: 0x04000AF5 RID: 2805
+	[Token(Token = "0x4000AF5")]
+	[FieldOffset(Offset = "0xB0")]
+	public static Action<long, long> OnCheatCrystal;
+
+	// Token: 0x04000AF6 RID: 2806
+	[Token(Token = "0x4000AF6")]
+	[FieldOffset(Offset = "0xB8")]
+	private static ObscuredInt _obscureWave;
+
+	// Token: 0x04000AF7 RID: 2807
+	[Token(Token = "0x4000AF7")]
+	[FieldOffset(Offset = "0xC0")]
+	public static Action<int, int> OnCheatWave;
+
+	// Token: 0x04000AF8 RID: 2808
+	[Token(Token = "0x4000AF8")]
+	[FieldOffset(Offset = "0xC8")]
+	private static Dictionary<int, ObscuredInt> _ObscuredSkill;
+
+	// Token: 0x04000AF9 RID: 2809
+	[Token(Token = "0x4000AF9")]
+	[FieldOffset(Offset = "0xD0")]
+	public static Action<int, int, int> OnCheatSkillLevel;
+
+	// Token: 0x04000AFA RID: 2810
+	[Token(Token = "0x4000AFA")]
+	[FieldOffset(Offset = "0xD8")]
+	public static AbilityValues TreasureValues;
+
+	// Token: 0x04000AFB RID: 2811
+	[Token(Token = "0x4000AFB")]
+	[FieldOffset(Offset = "0xE4")]
+	private static bool _inited;
+
+	// Token: 0x04000AFC RID: 2812
+	[Token(Token = "0x4000AFC")]
+	public const long MaxOverExp = 99999999999999L;
+
+	// Token: 0x04000AFD RID: 2813
+	[Token(Token = "0x4000AFD")]
+	private const int MaxCrystalOrigin = 60;
+
+	// Token: 0x04000AFE RID: 2814
+	[Token(Token = "0x4000AFE")]
+	[FieldOffset(Offset = "0xE8")]
+	public static XORInt MaxCrystalItem;
+
+	// Token: 0x04000AFF RID: 2815
+	[Token(Token = "0x4000AFF")]
+	[FieldOffset(Offset = "0xFC")]
+	public static XORInt MaxCrystalHero;
+
+	// Token: 0x04000B00 RID: 2816
+	[Token(Token = "0x4000B00")]
+	[FieldOffset(Offset = "0x110")]
+	private static ObscuredInt _obscuredCrystal;
+
+	// Token: 0x04000B01 RID: 2817
+	[Token(Token = "0x4000B01")]
+	[FieldOffset(Offset = "0x118")]
+	private static ObscuredInt _obscuredExtraCrystal;
+
+	// Token: 0x04000B02 RID: 2818
+	[Token(Token = "0x4000B02")]
+	public const int MaxExtraCrystal = 999999;
+
+	// Token: 0x04000B03 RID: 2819
+	[Token(Token = "0x4000B03")]
+	[FieldOffset(Offset = "0x120")]
+	private static XORLong _infiniteScore;
+
+	// Token: 0x04000B04 RID: 2820
+	[Token(Token = "0x4000B04")]
+	[FieldOffset(Offset = "0x148")]
+	private static ObscuredLong _infintieScore2;
+
+	// Token: 0x04000B05 RID: 2821
+	[Token(Token = "0x4000B05")]
+	[FieldOffset(Offset = "0x150")]
+	public static long LastInfiniteSocre;
+
+	// Token: 0x04000B06 RID: 2822
+	[Token(Token = "0x4000B06")]
+	[FieldOffset(Offset = "0x158")]
+	private static ItemSlot DummyColonyData;
+
+	// Token: 0x04000B07 RID: 2823
+	[Token(Token = "0x4000B07")]
+	[FieldOffset(Offset = "0x160")]
+	private static XORLong _cachedAllColoniesGold;
+
+	// Token: 0x04000B08 RID: 2824
+	[Token(Token = "0x4000B08")]
+	[FieldOffset(Offset = "0x188")]
+	private static XORFloat _hellArcherDamage;
+
+	// Token: 0x04000B09 RID: 2825
+	[Token(Token = "0x4000B09")]
+	[FieldOffset(Offset = "0x19C")]
+	private static XORFloat _hellArcherSpeed;
+
+	// Token: 0x04000B0A RID: 2826
+	[Token(Token = "0x4000B0A")]
+	[FieldOffset(Offset = "0x1B0")]
+	private static XORFloat _hellArcherCriticalDamage;
+
+	// Token: 0x04000B0B RID: 2827
+	[Token(Token = "0x4000B0B")]
+	[FieldOffset(Offset = "0x1C4")]
+	private static XORFloat _orcBStoneChance;
+
+	// Token: 0x04000B0C RID: 2828
+	[Token(Token = "0x4000B0C")]
+	[FieldOffset(Offset = "0x1D8")]
+	private static XORFloat _orcAStoneChance;
+
+	// Token: 0x04000B0D RID: 2829
+	[Token(Token = "0x4000B0D")]
+	[FieldOffset(Offset = "0x1EC")]
+	private static XORFloat _orcCrystalChance;
+
+	// Token: 0x04000B0E RID: 2830
+	[Token(Token = "0x4000B0E")]
+	public const int InfiniteWorldMapMaxLevel = 500000;
+
+	// Token: 0x04000B0F RID: 2831
+	[Token(Token = "0x4000B0F")]
+	[FieldOffset(Offset = "0x200")]
+	public static XORFloat ColoniesLeftTimeEnc;
+
+	// Token: 0x04000B10 RID: 2832
+	[Token(Token = "0x4000B10")]
+	[FieldOffset(Offset = "0x218")]
+	public static Player.HotTimeBonusGoldData HotTimeBonusGold;
+
+	// Token: 0x04000B11 RID: 2833
+	[Token(Token = "0x4000B11")]
+	[FieldOffset(Offset = "0x220")]
+	private static XORFloat _bonusGoldInAppAutoBattle;
+
+	// Token: 0x04000B12 RID: 2834
+	[Token(Token = "0x4000B12")]
+	[FieldOffset(Offset = "0x234")]
+	private static XORFloat _bonusGold;
+
+	// Token: 0x04000B13 RID: 2835
+	[Token(Token = "0x4000B13")]
+	[FieldOffset(Offset = "0x248")]
+	private static XORFloat _bonusGoldBuff;
+
+	// Token: 0x04000B14 RID: 2836
+	[Token(Token = "0x4000B14")]
+	[FieldOffset(Offset = "0x25C")]
+	private static XORFloat _criticalBonusGold;
+
+	// Token: 0x04000B15 RID: 2837
+	[Token(Token = "0x4000B15")]
+	[FieldOffset(Offset = "0x270")]
+	private static XORFloat _bonusExp;
+
+	// Token: 0x04000B16 RID: 2838
+	[Token(Token = "0x4000B16")]
+	[FieldOffset(Offset = "0x284")]
+	private static XORFloat _archerBonusDamage;
+
+	// Token: 0x04000B17 RID: 2839
+	[Token(Token = "0x4000B17")]
+	[FieldOffset(Offset = "0x298")]
+	public static int _totalSkillLevel;
+
+	// Token: 0x04000B18 RID: 2840
+	[Token(Token = "0x4000B18")]
+	[FieldOffset(Offset = "0x29C")]
+	public static int TotalHighLevelHeroes;
+
+	// Token: 0x04000B19 RID: 2841
+	[Token(Token = "0x4000B19")]
+	[FieldOffset(Offset = "0x2A0")]
+	private static Player.GoldPerWave[] goldPerWave;
+
+	// Token: 0x04000B1A RID: 2842
+	[Token(Token = "0x4000B1A")]
+	[FieldOffset(Offset = "0x2A8")]
+	public static PlayerSkillData Skill;
+
+	// Token: 0x02000221 RID: 545
+	[Token(Token = "0x2000221")]
+	public class HotTimeBonusGoldData
+	{
+		// Token: 0x06000BAB RID: 2987 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6000BAB")]
+		[Address(RVA = "0x2E67294", Offset = "0x2E67294", VA = "0x2E67294")]
+		internal void Clear()
+		{
+		}
+
+		// Token: 0x06000BAC RID: 2988 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6000BAC")]
+		[Address(RVA = "0x2E68720", Offset = "0x2E68720", VA = "0x2E68720")]
+		public HotTimeBonusGoldData()
+		{
+		}
+
+		// Token: 0x04000B1B RID: 2843
+		[Token(Token = "0x4000B1B")]
+		[FieldOffset(Offset = "0x10")]
+		public XORFloat value;
+
+		// Token: 0x04000B1C RID: 2844
+		[Token(Token = "0x4000B1C")]
+		[FieldOffset(Offset = "0x24")]
+		public XORFloat duration;
+
+		// Token: 0x04000B1D RID: 2845
+		[Token(Token = "0x4000B1D")]
+		[FieldOffset(Offset = "0x38")]
+		public ReactiveProperty<XORFloat> leftTime;
+	}
+
+	// Token: 0x02000222 RID: 546
+	[Token(Token = "0x2000222")]
+	private struct GoldPerWave
+	{
+		// Token: 0x06000BAD RID: 2989 RVA: 0x00002050 File Offset: 0x00000250
+		[Token(Token = "0x6000BAD")]
+		[Address(RVA = "0x2E687B4", Offset = "0x2E687B4", VA = "0x2E687B4")]
+		public GoldPerWave(int wave, int gold)
+		{
+		}
+
+		// Token: 0x04000B1E RID: 2846
+		[Token(Token = "0x4000B1E")]
+		[FieldOffset(Offset = "0x0")]
+		public int wave;
+
+		// Token: 0x04000B1F RID: 2847
+		[Token(Token = "0x4000B1F")]
+		[FieldOffset(Offset = "0x4")]
+		public int gold;
+	}
+}
+
+
+
+
+
+
+
+
+----------------------------------------------
+
+
+
+
+
+
+
+
+using System;
+using Il2CppDummyDll;
+using XOREnc;
+
+// Token: 0x02000226 RID: 550
+[Token(Token = "0x2000226")]
+public class PlayerSkillData
+{
+	// Token: 0x06000BB8 RID: 3000 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BB8")]
+	[Address(RVA = "0x2E604CC", Offset = "0x2E604CC", VA = "0x2E604CC")]
+	public void Update()
+	{
+	}
+
+	// Token: 0x06000BB9 RID: 3001 RVA: 0x00002050 File Offset: 0x00000250
+	[Token(Token = "0x6000BB9")]
+	[Address(RVA = "0x2E687BC", Offset = "0x2E687BC", VA = "0x2E687BC")]
+	public PlayerSkillData()
+	{
+	}
+
+	// Token: 0x04000B2B RID: 2859
+	[Token(Token = "0x4000B2B")]
+	[FieldOffset(Offset = "0x10")]
+	public XORFloat BonusGold;
+
+	// Token: 0x04000B2C RID: 2860
+	[Token(Token = "0x4000B2C")]
+	[FieldOffset(Offset = "0x24")]
+	public XORFloat BonusExp;
+
+	// Token: 0x04000B2D RID: 2861
+	[Token(Token = "0x4000B2D")]
+	[FieldOffset(Offset = "0x38")]
+	public XORFloat PerfectGold;
+
+	// Token: 0x04000B2E RID: 2862
+	[Token(Token = "0x4000B2E")]
+	[FieldOffset(Offset = "0x4C")]
+	public XORFloat Defense;
+
+	// Token: 0x04000B2F RID: 2863
+	[Token(Token = "0x4000B2F")]
+	[FieldOffset(Offset = "0x60")]
+	public XORFloat Soul;
+
+	// Token: 0x04000B30 RID: 2864
+	[Token(Token = "0x4000B30")]
+	[FieldOffset(Offset = "0x74")]
+	public XORFloat Damage;
+
+	// Token: 0x04000B31 RID: 2865
+	[Token(Token = "0x4000B31")]
+	[FieldOffset(Offset = "0x88")]
+	public XORFloat HeroDamage;
+
+	// Token: 0x04000B32 RID: 2866
+	[Token(Token = "0x4000B32")]
+	[FieldOffset(Offset = "0x9C")]
+	public XORFloat Cooldown;
+
+	// Token: 0x04000B33 RID: 2867
+	[Token(Token = "0x4000B33")]
+	[FieldOffset(Offset = "0xB0")]
+	public XORFloat CriticalChance;
+
+	// Token: 0x04000B34 RID: 2868
+	[Token(Token = "0x4000B34")]
+	[FieldOffset(Offset = "0xC4")]
+	public XORFloat CriticalDamage;
+
+	// Token: 0x04000B35 RID: 2869
+	[Token(Token = "0x4000B35")]
+	[FieldOffset(Offset = "0xD8")]
+	public XORFloat IceMastery;
+
+	// Token: 0x04000B36 RID: 2870
+	[Token(Token = "0x4000B36")]
+	[FieldOffset(Offset = "0xEC")]
+	public XORFloat FireMastery;
+
+	// Token: 0x04000B37 RID: 2871
+	[Token(Token = "0x4000B37")]
+	[FieldOffset(Offset = "0x100")]
+	public XORFloat PhysicsMastery;
+
+	// Token: 0x04000B38 RID: 2872
+	[Token(Token = "0x4000B38")]
+	[FieldOffset(Offset = "0x114")]
+	public XORFloat PoisonMastery;
+
+	// Token: 0x04000B39 RID: 2873
+	[Token(Token = "0x4000B39")]
+	[FieldOffset(Offset = "0x128")]
+	public XORFloat LightningMastery;
+
+	// Token: 0x04000B3A RID: 2874
+	[Token(Token = "0x4000B3A")]
+	[FieldOffset(Offset = "0x13C")]
+	public XORFloat FieldDefense;
+
+	// Token: 0x04000B3B RID: 2875
+	[Token(Token = "0x4000B3B")]
+	[FieldOffset(Offset = "0x150")]
+	public XORFloat RocketArrow;
+
+	// Token: 0x04000B3C RID: 2876
+	[Token(Token = "0x4000B3C")]
+	[FieldOffset(Offset = "0x164")]
+	public XORFloat WindArrow;
+
+	// Token: 0x04000B3D RID: 2877
+	[Token(Token = "0x4000B3D")]
+	[FieldOffset(Offset = "0x178")]
+	public XORFloat UnfairTreaty;
+
+	// Token: 0x04000B3E RID: 2878
+	[Token(Token = "0x4000B3E")]
+	[FieldOffset(Offset = "0x18C")]
+	public XORFloat Road;
+
+	// Token: 0x04000B3F RID: 2879
+	[Token(Token = "0x4000B3F")]
+	[FieldOffset(Offset = "0x1A0")]
+	public XORFloat MimicChance;
+
+	// Token: 0x04000B40 RID: 2880
+	[Token(Token = "0x4000B40")]
+	[FieldOffset(Offset = "0x1B4")]
+	public XORInt ExpHP;
+
+	// Token: 0x04000B41 RID: 2881
+	[Token(Token = "0x4000B41")]
+	[FieldOffset(Offset = "0x1C8")]
+	public XORInt ExpMP;
+
+	// Token: 0x04000B42 RID: 2882
+	[Token(Token = "0x4000B42")]
+	[FieldOffset(Offset = "0x1DC")]
+	public XORInt ExpHeroDamage;
+
+	// Token: 0x04000B43 RID: 2883
+	[Token(Token = "0x4000B43")]
+	[FieldOffset(Offset = "0x1F0")]
+	public XORInt ExpArcherDamage;
+
+	// Token: 0x04000B44 RID: 2884
+	[Token(Token = "0x4000B44")]
+	[FieldOffset(Offset = "0x204")]
+	public XORInt ExpGold;
+}
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------
+
+

@@ -1,0 +1,89 @@
+موقع الدوال 
+
+uintptr_t ShowOwnSkillComp_m_SkillList(){
+	return (uintptr_t) Il2CppGetFieldOffset("Assembly-CSharp.dll", "Battle", "ShowOwnSkillComp", "m_SkillList");
+}
+uintptr_t ShowOwnSkillComp_skillUseTypeList(){
+	("Assembly-CSharp.dll", "Battle", "ShowOwnSkillComp", "skillUseTypeList");
+}
+
+
+[FieldOffset(Offset = "0x18")]
+public Dictionary<int, List<int>> skillUseTypeList;
+
+[FieldOffset(Offset = "0x10")]
+private List<ShowSkillData> m_SkillList;
+
+---------------
+
+
+
+ Il2CppGetFieldOffset("Assembly-CSharp.dll", "", "ShowSkillData", "m_TranID");
+
+FieldOffset(Offset = "0x78")]
+public int m_TranID;
+
+[Il2CppDummyDll.FieldOffset(Offset = "0x70")]
+public ShowSkillComp m_SkillComp;
+
+في 
+
+public class ShowSkillData
+
+--
+
+
+
+[Il2CppDummyDll.FieldOffset(Offset = "0x944")]
+	public int m_iSummonSkillId;
+في 
+Il2CppGetFieldOffset("Assembly-CSharp.dll", "", "ShowPlayer", "m_iSummonSkillId");
+
+------------------
+
+
+	[Il2CppDummyDll.FieldOffset(Offset = "0x498")]
+		public LogicSkillComp m_SkillComp;
+في
+
+
+Assembly-CSharp.dll", "Battle", "LogicFighter", "m_SkillComp")
+
+
+-----------------
+
+[FieldOffset(Offset = "0x90")]
+public CoolDownComp m_CoolDownComp;
+
+في
+ Il2CppGetFieldOffset("Assembly-CSharp.dll", "Battle", "LogicSkillComp", "m_CoolDownComp")
+ 
+ --------------------
+ 	FieldOffset(Offset = "0x18")]
+		public Dictionary<int, CoolDownData> m_DicCoolInfo;
+		
+		في 
+		
+		Il2CppGetFieldOffset("Assembly-CSharp.dll", "Battle", "CoolDownComp", "m_DicCoolInfo")
+		
+		
+		
+		
+		
+		------------
+		
+		
+public virtual uint GetCoolTime()
+{
+	return 0U;
+}
+
+
+في 
+ Il2CppGetMethodOffset("Assembly-CSharp.dll", "Battle", "CoolDownData", "GetCoolTime")
+ 
+ -------------
+ 
+ 
+		
+		
