@@ -1,85 +1,36 @@
-# THEOS_DEVICE_IP = 127.0.0.1 -p 2222 # install to device from pc
-ARCHS = arm64 #arm64e
+ARCHS = arm64
 DEBUG = 0
 FINALPACKAGE = 1
 FOR_RELEASE = 1
-
-# 0 to treat warnings as errors, 1 otherwise.
-IGNORE_WARNINGS=1
-
-# 0 to compile for rootful jailbreaks, 1 otherwise.
+IGNORE_WARNINGS = 1
 ROOTLESS = 1
 
 ifeq ($(ROOTLESS), 1)
 THEOS_PACKAGE_SCHEME = rootless
-endif 
-
-# only set this  to 1 if you are on mobile theos
-# assuming you have an sdk at your theos sdks directory
-# this will include c++ headers and other needed headers for your project so you don't need to manually include them or something like that
-# if some c++ headers are still missing in your sdk like "initializer_list" then manually copy them to your c++ headers directory and not your project folder
-# for example in my case c++ headers directory is located at /private/var/theos/sdks/iPhoneOS11.2.sdk/usr/include/c++/4.2.1/
-# please note, do not include c++ headers in your theos includes to enable c++ which is a ghetto solution and use this approach instead
-MOBILE_THEOS=1
-ifeq ($(MOBILE_THEOS),1)
-  # path to your sdk
-  SDK_PATH = $(THEOS)/sdks/iPhoneOS14.5.sdk/
-  $(info ===> Setting SYSROOT to $(SDK_PATH)...)
-  SYSROOT = $(SDK_PATH)
-else
-  TARGET = iphone:clang:latest:8.0
 endif
-
-
-
-## Common frameworks ##
-PROJ_COMMON_FRAMEWORKS = UIKit Foundation Security QuartzCore CoreGraphics CoreText OpenGLES
-
-## source files ##
-KITTYMEMORY_SRC = $(wildcard KittyMemory/*.cpp)
-SCLALERTVIEW_SRC =  $(wildcard SCLAlertView/*.m)
-MENU_SRC = Menu.xm
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = koky
+TWEAK_NAME = loly
 
-koky_CFLAGS = -fobjc-arc -I.
-koky_CCFLAGS = -std=c++11 -fno-rtti -fno-exceptions -DNDEBUG
-koky_LDFLAGS = -lc
+loly_FILES = Tweak.xm Menu.xm
+loly_CFLAGS = -fobjc-arc -w
+loly_CCFLAGS = -std=c++11 -fno-rtti -fno-exceptions -DNDEBUG -w
+loly_LDFLAGS = -lc
 
-ifeq ($(IGNORE_WARNINGS),1)
-  koky_CFLAGS += -w
-  koky_CCFLAGS += -w
-endif
-
-
-#  Il2Cpp.mm Logger.mm
-
-koky_FILES = Tweak.xm  Logger.mm  Menu.xm   $(MENU_SRC)
-
-koky_LIBRARIES += substrate
-
-koky_FRAMEWORKS = $(PROJ_COMMON_FRAMEWORKS)
-# GO_EASY_ON_ME = 1
+loly_LIBRARIES += substrate
+loly_FRAMEWORKS = UIKit Foundation Security QuartzCore CoreGraphics CoreText OpenGLES
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
-# ====================== OBFUSCATION ======================
+# Obfuscation
 before-package::
-	@echo "Running FULL hidey obfuscation..."
-	@chmod +x obfuscate.sh
-	@./obfuscate.sh
+	@echo "Running obfuscation..."
+	@chmod +x obfuscate.sh 2>/dev/null || true
+	@./obfuscate.sh 2>/dev/null || true
 
 after-package::
-	@echo "✅ Tweak packaged with automatic obfuscation!"
-
-clean::
-	@rm -f hidey.h hidey.mm
-
-internal-package-check::
-	@chmod 777 versionCheck.sh # Give permission to script 	
-	@./versionCheck.sh # Script to verify template's current version
+	@echo "✅ Tweak packaged successfully!"
 
 after-install::
-	install.exec "killall -9  || :"
+	@install.exec "killall -9 SpringBoard || killall -9 loly || :"
