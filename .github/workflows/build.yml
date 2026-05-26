@@ -13,22 +13,43 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Theos using Official Action
-        uses: Randomblock1/theos-action@v1
+      - name: Cache Theos
+        id: cache-theos
+        uses: actions/cache@v4
         with:
-          sdk: 'iPhoneOS14.5.sdk'   # يمكنك تغييره حسب احتياجك
+          path: |
+            ~/theos
+            /opt/theos
+          key: theos-cache-v1-${{ runner.os }}
+          restore-keys: |
+            theos-cache-v1-
+
+      - name: Setup Theos
+        if: steps.cache-theos.outputs.cache-hit != 'true'
+        run: |
+          git clone --recursive https://github.com/theos/theos.git ~/theos
+          sudo mv ~/theos /opt/theos
+          sudo chown -R $(whoami) /opt/theos
+          echo "THEOS=/opt/theos" >> $GITHUB_ENV
+          echo "THEOS_MAKE_PATH=/opt/theos/makefiles" >> $GITHUB_ENV
+
+      - name: Setup Theos (Cached)
+        if: steps.cache-theos.outputs.cache-hit == 'true'
+        run: |
+          echo "THEOS=/opt/theos" >> $GITHUB_ENV
+          echo "THEOS_MAKE_PATH=/opt/theos/makefiles" >> $GITHUB_ENV
 
       - name: Build Tweak
         run: |
           make clean
           make package
 
-      - name: Upload DEB File
+      - name: Upload DEB
         uses: actions/upload-artifact@v4
         with:
           name: loly-tweak
           path: packages/*.deb
           retention-days: 7
 
-      - name: Show Build Status
+      - name: Show Build Result
         run: ls -la packages/
