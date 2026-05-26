@@ -13,20 +13,22 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Theos
-        uses: theos/theos-action@v1
+      - name: Install Theos using Official Action
+        uses: Randomblock1/theos-action@v1
+        with:
+          sdk: 'iPhoneOS14.5.sdk'   # يمكنك تغييره حسب احتياجك
 
       - name: Build Tweak
         run: |
           make clean
           make package
 
-      - name: Upload DEB
+      - name: Upload DEB File
         uses: actions/upload-artifact@v4
         with:
           name: loly-tweak
           path: packages/*.deb
           retention-days: 7
 
-      - name: Show Output
+      - name: Show Build Status
         run: ls -la packages/
