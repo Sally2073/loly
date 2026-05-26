@@ -1,0 +1,32 @@
+name: Build Loly Tweak
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Theos
+        uses: theos/theos-action@v1
+
+      - name: Build Tweak
+        run: |
+          make clean
+          make package
+
+      - name: Upload DEB
+        uses: actions/upload-artifact@v4
+        with:
+          name: loly-tweak
+          path: packages/*.deb
+          retention-days: 7
+
+      - name: Show Output
+        run: ls -la packages/
